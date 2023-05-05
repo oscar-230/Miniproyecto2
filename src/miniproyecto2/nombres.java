@@ -138,7 +138,9 @@ public class nombres extends javax.swing.JFrame {
 
     private void maquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maquinaActionPerformed
         // TODO add your handling code here:
-        
+        NewJFrame newframe = new NewJFrame();
+        newframe.setVisible(true);
+        this.dispose();//para que no se acumulen las ventanas
     }//GEN-LAST:event_maquinaActionPerformed
 
     
