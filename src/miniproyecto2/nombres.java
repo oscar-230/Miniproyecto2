@@ -131,7 +131,9 @@ public class nombres extends javax.swing.JFrame {
 
     private void personaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personaActionPerformed
         // ESPACIO L¿PARA ANCLAR A LA VENTANA PROXIMA
-        
+        FormTicTacToe newframe = new FormTicTacToe();
+        newframe.setVisible(true);
+        this.dispose();//para que no se acumulen las ventanas
     }//GEN-LAST:event_personaActionPerformed
 
     private void maquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maquinaActionPerformed
