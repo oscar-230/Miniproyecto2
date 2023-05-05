@@ -65,7 +65,7 @@ public class FormTicTacToe extends javax.swing.JFrame {
                 
                 Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
                 
-                Image img = new ImageIcon("img/vacio.png").getImage();
+                Image img = new ImageIcon("-").getImage();
                 ImageIcon img2 = new ImageIcon(img.getScaledInstance(
                     this.tablero[i][j].getWidth(),
                     this.tablero[i][j].getHeight(),
@@ -325,7 +325,7 @@ public class FormTicTacToe extends javax.swing.JFrame {
     }//GEN-LAST:event_lbl21MouseClicked
 
     private void lbl22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl22MouseClicked
-        elegirPosicion(0,0);
+        elegirPosicion(2,2);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl22MouseClicked
 
