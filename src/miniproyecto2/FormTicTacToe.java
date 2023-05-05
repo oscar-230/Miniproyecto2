@@ -5,6 +5,8 @@
  */
 package miniproyecto2;
 
+import javax.swing.JLabel;
+
 
 
 /**
@@ -13,6 +15,9 @@ package miniproyecto2;
  */
 public class FormTicTacToe extends javax.swing.JFrame {
     
+    private JLabel[][] tablero;
+    private int J1Puntos;
+    private int J2Puntos;
     
 
     /**
@@ -21,23 +26,62 @@ public class FormTicTacToe extends javax.swing.JFrame {
     public FormTicTacToe() {
         initComponents();
         
+        // Para crear el tablero
+        JLabel[][] t = {
+            {lbl00, lbl01, lbl02},
+            {lbl10, lbl11, lbl12},
+            {lbl20, lbl21, lbl22}
+        };
+        this.tablero = t;
+        this.J1Puntos = 0;
+        this.J2Puntos = 0;
+        
+        
     }
     private int generaNumeroAleatorio(int minimo, int maximo) {
-        return 0;
+        int num = (int) (Math.random() * (minimo - (maximo + 1)) + (maximo + 1));
+        return num;
         
     }
     public void elegirTurnoInicial() {
+        int n = this.generaNumeroAleatorio(1, 2);
+        //this.juego.setTurno(n == 1);
         
     }
 
     public void actualizarPuntuacion(){
-        
+        this.txtJ1puntos.setText(this.J1Puntos + "");
+        this.txtJ2puntos.setText(this.J2Puntos + "");
     }
     
     public void mostrarTurno() {
-
+        if (this.juego.isTurno()) {
+            this.lblTurno.setText("JUGADOR 1");
+        } else {
+            this.lblTurno.setText("JUGADOR 2");
+        }
     }
-    
+     public void inicializarTablero(){
+        for (int i = 0; i < this.tablero.length; i++) {
+            for (int j = 0; j < this.tablero[0].length; j++) {
+                
+                Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
+                
+                Image img = new ImageIcon("img/vacio.png").getImage();
+                ImageIcon img2 = new ImageIcon(img.getScaledInstance(
+                    this.tablero[i][j].getWidth(),
+                    this.tablero[i][j].getHeight(),
+                    Image.SCALE_SMOOTH)
+                        
+                );
+                
+                this.tablero[i][j].setIcon(img2);
+                this.tablero[i][j].setBorder(border);
+                
+            }
+            
+        }
+    }
     
     
     
