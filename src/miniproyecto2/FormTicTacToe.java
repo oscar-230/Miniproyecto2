@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package miniproyecto2;
 
 import java.awt.Color;
@@ -15,10 +10,7 @@ import javax.swing.border.Border;
 
 
 
-/**
- *
- * @author ASUS
- */
+
 public class FormTicTacToe extends javax.swing.JFrame {
     private TicTacToe juego;
     private JLabel[][] tablero;
