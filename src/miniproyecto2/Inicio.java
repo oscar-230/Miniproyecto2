@@ -89,7 +89,9 @@ public class Inicio extends javax.swing.JFrame {
 
     private void playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playActionPerformed
         // ANCLAR A LA VENTANA
-        
+        nombres newframe = new nombres();
+        newframe.setVisible(true);
+        this.dispose();//para que no se acumulen las ventanas
     }//GEN-LAST:event_playActionPerformed
 
     /**
