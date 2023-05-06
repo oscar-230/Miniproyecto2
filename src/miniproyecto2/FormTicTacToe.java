@@ -2,28 +2,26 @@ package miniproyecto2;
 
 import java.awt.Color;
 import java.awt.Image;
+import java.awt.event.KeyEvent;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.border.Border;
 
-
-
-
 public class FormTicTacToe extends javax.swing.JFrame {
+
     private TicTacToe juego;
     private JLabel[][] tablero;
     private int J1Puntos;
     private int J2Puntos;
-    
 
     /**
      * Creates new form FormTicTacToe
      */
     public FormTicTacToe() {
         initComponents();
-        
+
         // Para crear el tablero
         JLabel[][] t = {
             {lbl00, lbl01, lbl02},
@@ -34,24 +32,26 @@ public class FormTicTacToe extends javax.swing.JFrame {
         this.J1Puntos = 0;
         this.J2Puntos = 0;
         this.reset();
-        
+
     }
+
     private int generaNumeroAleatorio(int minimo, int maximo) {
         int num = (int) (Math.random() * (minimo - (maximo + 1)) + (maximo + 1));
         return num;
-        
+
     }
+
     public void elegirTurnoInicial() {
         int n = this.generaNumeroAleatorio(1, 2);
         //this.juego.setTurno(n == 1);
-        
+
     }
 
-    public void actualizarPuntuacion(){
+    public void actualizarPuntuacion() {
         this.txtJ1puntos.setText(this.J1Puntos + "");
         this.txtJ2puntos.setText(this.J2Puntos + "");
     }
-    
+
     public void mostrarTurno() {
         if (this.juego.isTurno()) {
             this.lblTurno.setText("JUGADOR 1");
@@ -59,84 +59,79 @@ public class FormTicTacToe extends javax.swing.JFrame {
             this.lblTurno.setText("JUGADOR 2");
         }
     }
-     public void inicializarTablero(){
+
+    public void inicializarTablero() {
         for (int i = 0; i < this.tablero.length; i++) {
             for (int j = 0; j < this.tablero[0].length; j++) {
-                
+
                 Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
-                
+
                 Image img = new ImageIcon("-").getImage();
                 ImageIcon img2 = new ImageIcon(img.getScaledInstance(
+                        this.tablero[i][j].getWidth(),
+                        this.tablero[i][j].getHeight(),
+                        Image.SCALE_SMOOTH)
+                );
+
+                this.tablero[i][j].setIcon(img2);
+                this.tablero[i][j].setBorder(border);
+
+            }
+
+        }
+    }
+
+    public void elegirPosicion(int i, int j) {
+        if (this.juego.getSimboloAt(i, j) == Simbolo.VACIO) {
+            juego.insertarEn(i, j);
+
+            Image img;
+            if (this.juego.isTurno()) {
+                img = new ImageIcon("img/x.png").getImage();
+
+            } else {
+                img = new ImageIcon("img/o.png").getImage();
+            }
+
+            ImageIcon img2 = new ImageIcon(img.getScaledInstance(
                     this.tablero[i][j].getWidth(),
                     this.tablero[i][j].getHeight(),
                     Image.SCALE_SMOOTH)
-                        
-                );
-                
-                this.tablero[i][j].setIcon(img2);
-                this.tablero[i][j].setBorder(border);
-                
-            }
-            
-        }
-    }
-     
-     public void elegirPosicion(int i, int j){
-        if (this.juego.getSimboloAt(i, j) == Simbolo.VACIO) {
-            juego.insertarEn(i, j);
-            
-            Image img;
-            if(this.juego.isTurno()){
-                img = new ImageIcon("img/x.png").getImage();
-                 
-            }else{
-            img = new ImageIcon("img/o.png").getImage();     
-            }
-            
-            ImageIcon img2 = new ImageIcon(img.getScaledInstance(
-                this.tablero[i][j].getWidth(),
-                this.tablero[i][j].getHeight(),
-                Image.SCALE_SMOOTH)
-                        
             );
-                
+
             this.tablero[i][j].setIcon(img2);
             this.juego.cambiarTurno();
             this.mostrarTurno();
             // COMPROBAR FINAL DE LA PARTIDA
-            if(this.juego.finPartida()){
+            if (this.juego.finPartida()) {
                 Simbolo ganador = juego.ganador();
                 if (ganador == null) {
                     JOptionPane.showMessageDialog(rootPane, "EMPATE");
-                    
-                }else if (ganador == Simbolo.X){
-                    this.J1Puntos ++;
+
+                } else if (ganador == Simbolo.X) {
+                    this.J1Puntos++;
                     JOptionPane.showMessageDialog(rootPane, "GANA JUGADOIR 1");
-                    
-                }else{
+
+                } else {
                     this.J2Puntos++;
                     JOptionPane.showMessageDialog(rootPane, "GANA JUGADOR 2");
-                    
+
                 }
                 //Reiniciar partida
                 this.reset();
             }
-            
-            
+
         }
     }
-     
-    public void reset (){
+
+    public void reset() {
         this.juego = new TicTacToe();
         this.elegirTurnoInicial();
         this.mostrarTurno();
         this.actualizarPuntuacion();
         this.inicializarTablero();
-        
+
     }
-    
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -186,11 +181,21 @@ public class FormTicTacToe extends javax.swing.JFrame {
                 lbl00MouseClicked(evt);
             }
         });
+        lbl00.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lbl00KeyPressed(evt);
+            }
+        });
         getContentPane().add(lbl00);
 
         lbl01.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl01MouseClicked(evt);
+            }
+        });
+        lbl01.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lbl01KeyPressed(evt);
             }
         });
         getContentPane().add(lbl01);
@@ -201,11 +206,21 @@ public class FormTicTacToe extends javax.swing.JFrame {
                 lbl02MouseClicked(evt);
             }
         });
+        lbl02.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lbl02KeyPressed(evt);
+            }
+        });
         getContentPane().add(lbl02);
 
         lbl10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl10MouseClicked(evt);
+            }
+        });
+        lbl10.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lbl10KeyPressed(evt);
             }
         });
         getContentPane().add(lbl10);
@@ -215,11 +230,21 @@ public class FormTicTacToe extends javax.swing.JFrame {
                 lbl11MouseClicked(evt);
             }
         });
+        lbl11.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lbl11KeyPressed(evt);
+            }
+        });
         getContentPane().add(lbl11);
 
         lbl12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl12MouseClicked(evt);
+            }
+        });
+        lbl12.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lbl12KeyPressed(evt);
             }
         });
         getContentPane().add(lbl12);
@@ -229,6 +254,11 @@ public class FormTicTacToe extends javax.swing.JFrame {
                 lbl20MouseClicked(evt);
             }
         });
+        lbl20.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lbl20KeyPressed(evt);
+            }
+        });
         getContentPane().add(lbl20);
 
         lbl21.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -236,11 +266,21 @@ public class FormTicTacToe extends javax.swing.JFrame {
                 lbl21MouseClicked(evt);
             }
         });
+        lbl21.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lbl21KeyPressed(evt);
+            }
+        });
         getContentPane().add(lbl21);
 
         lbl22.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl22MouseClicked(evt);
+            }
+        });
+        lbl22.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lbl22KeyPressed(evt);
             }
         });
         getContentPane().add(lbl22);
@@ -271,61 +311,59 @@ public class FormTicTacToe extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
-
 
 //  MAUSE PARA EL TABLERO 
-    
+
     private void txtJ1puntosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJ1puntosActionPerformed
-       
+
     }//GEN-LAST:event_txtJ1puntosActionPerformed
 
     private void txtJ2puntosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJ2puntosActionPerformed
-        
+
     }//GEN-LAST:event_txtJ2puntosActionPerformed
 
     private void lbl00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl00MouseClicked
-        elegirPosicion(0,0);
+        elegirPosicion(0, 0);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl00MouseClicked
 
     private void lbl01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl01MouseClicked
-        elegirPosicion(0,1);
+        elegirPosicion(0, 1);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl01MouseClicked
 
     private void lbl02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl02MouseClicked
-        elegirPosicion(0,2);
+        elegirPosicion(0, 2);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl02MouseClicked
 
     private void lbl10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl10MouseClicked
-        elegirPosicion(1,0);
+        elegirPosicion(1, 0);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl10MouseClicked
 
     private void lbl11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl11MouseClicked
-       elegirPosicion(1,1);
+        elegirPosicion(1, 1);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl11MouseClicked
 
     private void lbl12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl12MouseClicked
-       elegirPosicion(1,2);
+        elegirPosicion(1, 2);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl12MouseClicked
 
     private void lbl20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl20MouseClicked
-        elegirPosicion(2,0);
+        elegirPosicion(2, 0);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl20MouseClicked
 
     private void lbl21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl21MouseClicked
-        elegirPosicion(2,1);
+        elegirPosicion(2, 1);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl21MouseClicked
 
     private void lbl22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl22MouseClicked
-        elegirPosicion(2,2);
+        elegirPosicion(2, 2);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl22MouseClicked
 
@@ -334,9 +372,43 @@ public class FormTicTacToe extends javax.swing.JFrame {
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_btnresetActionPerformed
 
-    
-    
-    
+    private void lbl00KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl00KeyPressed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_lbl00KeyPressed
+
+    private void lbl01KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl01KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbl01KeyPressed
+
+    private void lbl02KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl02KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbl02KeyPressed
+
+    private void lbl10KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl10KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbl10KeyPressed
+
+    private void lbl11KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl11KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbl11KeyPressed
+
+    private void lbl12KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl12KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbl12KeyPressed
+
+    private void lbl20KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl20KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbl20KeyPressed
+
+    private void lbl21KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl21KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbl21KeyPressed
+
+    private void lbl22KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl22KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbl22KeyPressed
+
     /**
      * @param args the command line arguments
      */
