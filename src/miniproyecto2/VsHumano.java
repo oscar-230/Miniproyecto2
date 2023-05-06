@@ -1,28 +1,36 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package miniproyecto2;
 
 import java.awt.Color;
 import java.awt.Image;
-import java.awt.event.KeyEvent;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.border.Border;
 
+/**
+ *
+ * @author ASUS
+ */
 public class VsHumano extends javax.swing.JFrame {
-
+    
     private TicTacToe juego;
     private JLabel[][] tablero;
     private int J1Puntos;
     private int J2Puntos;
+    
 
     /**
      * Creates new form FormTicTacToe
      */
     public VsHumano() {
         initComponents();
-        
-
+        this.juego = new TicTacToe();
         // Para crear el tablero
         JLabel[][] t = {
             {lbl00, lbl01, lbl02},
@@ -33,26 +41,21 @@ public class VsHumano extends javax.swing.JFrame {
         this.J1Puntos = 0;
         this.J2Puntos = 0;
         this.reset();
-
     }
-
     private int generaNumeroAleatorio(int minimo, int maximo) {
         int num = (int) (Math.random() * (minimo - (maximo + 1)) + (maximo + 1));
         return num;
-
     }
-
     public void elegirTurnoInicial() {
         int n = this.generaNumeroAleatorio(1, 2);
-        //this.juego.setTurno(n == 1);
-
+        this.juego.setTurno(n == 1);
     }
 
-    public void actualizarPuntuacion() {
+    public void actualizarPuntuacion(){
         this.txtJ1puntos.setText(this.J1Puntos + "");
         this.txtJ2puntos.setText(this.J2Puntos + "");
     }
-
+    
     public void mostrarTurno() {
         if (this.juego.isTurno()) {
             this.lblTurno.setText("JUGADOR 1");
@@ -60,78 +63,80 @@ public class VsHumano extends javax.swing.JFrame {
             this.lblTurno.setText("JUGADOR 2");
         }
     }
-
-    public void inicializarTablero() {
+    public void inicializarTablero(){
         for (int i = 0; i < this.tablero.length; i++) {
             for (int j = 0; j < this.tablero[0].length; j++) {
-
+                
                 Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
-
-                Image img = new ImageIcon("-").getImage();
+                
+                Image img = new ImageIcon("").getImage();
                 ImageIcon img2 = new ImageIcon(img.getScaledInstance(
-                        this.tablero[i][j].getWidth(),
-                        this.tablero[i][j].getHeight(),
-                        Image.SCALE_SMOOTH)
-                );
-
-                this.tablero[i][j].setIcon(img2);
-                this.tablero[i][j].setBorder(border);
-
-            }
-
-        }
-    }
-
-    public void elegirPosicion(int i, int j) {
-        if (this.juego.getSimboloAt(i, j) == Simbolo.VACIO) {
-            juego.insertarEn(i, j);
-
-            Image img;
-            if (this.juego.isTurno()) {
-                img = new ImageIcon("img/x.png").getImage();
-
-            } else {
-                img = new ImageIcon("img/o.png").getImage();
-            }
-
-            ImageIcon img2 = new ImageIcon(img.getScaledInstance(
                     this.tablero[i][j].getWidth(),
                     this.tablero[i][j].getHeight(),
                     Image.SCALE_SMOOTH)
+                        
+                );
+                
+                this.tablero[i][j].setIcon(img2);
+                this.tablero[i][j].setBorder(border);
+                
+            }
+            
+        }
+    }
+    
+    public void elegirPosicion(int i, int j){
+        if (this.juego.getSimboloAt(i, j) == Simbolo.VACIO) {
+            juego.insertarEn(i, j);
+            
+            Image img;
+            if(this.juego.isTurno()){
+                img = new ImageIcon("img/x.png").getImage();
+                 
+            }else{
+            img = new ImageIcon("img/o.png").getImage();     
+            }
+            
+            ImageIcon img2 = new ImageIcon(img.getScaledInstance(
+                this.tablero[i][j].getWidth(),
+                this.tablero[i][j].getHeight(),
+                Image.SCALE_SMOOTH)
+                        
             );
-
+                
             this.tablero[i][j].setIcon(img2);
             this.juego.cambiarTurno();
             this.mostrarTurno();
             // COMPROBAR FINAL DE LA PARTIDA
-            if (this.juego.finPartida()) {
+            if(this.juego.finPartida()){
                 Simbolo ganador = juego.ganador();
                 if (ganador == null) {
                     JOptionPane.showMessageDialog(rootPane, "EMPATE");
-
-                } else if (ganador == Simbolo.X) {
-                    this.J1Puntos++;
+                    
+                }else if (ganador == Simbolo.X){
+                    this.J1Puntos ++;
                     JOptionPane.showMessageDialog(rootPane, "GANA JUGADOIR 1");
-
-                } else {
+                    
+                }else{
                     this.J2Puntos++;
                     JOptionPane.showMessageDialog(rootPane, "GANA JUGADOR 2");
-
+                    
                 }
                 //Reiniciar partida
                 this.reset();
             }
-
+            
+            
         }
     }
-
-    public void reset() {
+    
+    public void reset (){
         this.juego = new TicTacToe();
         this.elegirTurnoInicial();
         this.mostrarTurno();
         this.actualizarPuntuacion();
         this.inicializarTablero();
-
+        
     }
 
     /**
@@ -164,44 +169,32 @@ public class VsHumano extends javax.swing.JFrame {
         setBackground(new java.awt.Color(153, 255, 255));
         setMinimumSize(new java.awt.Dimension(500, 400));
         setResizable(false);
+        getContentPane().setLayout(new java.awt.GridLayout(5, 3));
+        getContentPane().add(jLabel1);
 
         turno.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         turno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         turno.setText("Turno");
+        getContentPane().add(turno);
 
         lblTurno.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lblTurno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTurno.setText("J1");
+        getContentPane().add(lblTurno);
 
         lbl00.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl00MouseClicked(evt);
             }
         });
-<<<<<<< HEAD
-=======
-        lbl00.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                lbl00KeyPressed(evt);
-            }
-        });
         getContentPane().add(lbl00);
->>>>>>> 730d4e07c5bb7d7540be1d98a9ca69e5c8f4378a
 
         lbl01.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl01MouseClicked(evt);
             }
         });
-<<<<<<< HEAD
-=======
-        lbl01.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                lbl01KeyPressed(evt);
-            }
-        });
         getContentPane().add(lbl01);
->>>>>>> 730d4e07c5bb7d7540be1d98a9ca69e5c8f4378a
 
         lbl02.setBackground(new java.awt.Color(102, 255, 255));
         lbl02.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -209,105 +202,49 @@ public class VsHumano extends javax.swing.JFrame {
                 lbl02MouseClicked(evt);
             }
         });
-<<<<<<< HEAD
-=======
-        lbl02.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                lbl02KeyPressed(evt);
-            }
-        });
         getContentPane().add(lbl02);
->>>>>>> 730d4e07c5bb7d7540be1d98a9ca69e5c8f4378a
 
         lbl10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl10MouseClicked(evt);
             }
         });
-<<<<<<< HEAD
-=======
-        lbl10.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                lbl10KeyPressed(evt);
-            }
-        });
         getContentPane().add(lbl10);
->>>>>>> 730d4e07c5bb7d7540be1d98a9ca69e5c8f4378a
 
         lbl11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl11MouseClicked(evt);
             }
         });
-<<<<<<< HEAD
-=======
-        lbl11.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                lbl11KeyPressed(evt);
-            }
-        });
         getContentPane().add(lbl11);
->>>>>>> 730d4e07c5bb7d7540be1d98a9ca69e5c8f4378a
 
         lbl12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl12MouseClicked(evt);
             }
         });
-<<<<<<< HEAD
-=======
-        lbl12.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                lbl12KeyPressed(evt);
-            }
-        });
         getContentPane().add(lbl12);
->>>>>>> 730d4e07c5bb7d7540be1d98a9ca69e5c8f4378a
 
         lbl20.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl20MouseClicked(evt);
             }
         });
-<<<<<<< HEAD
-=======
-        lbl20.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                lbl20KeyPressed(evt);
-            }
-        });
         getContentPane().add(lbl20);
->>>>>>> 730d4e07c5bb7d7540be1d98a9ca69e5c8f4378a
 
         lbl21.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl21MouseClicked(evt);
             }
         });
-<<<<<<< HEAD
-=======
-        lbl21.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                lbl21KeyPressed(evt);
-            }
-        });
         getContentPane().add(lbl21);
->>>>>>> 730d4e07c5bb7d7540be1d98a9ca69e5c8f4378a
 
         lbl22.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl22MouseClicked(evt);
             }
         });
-<<<<<<< HEAD
-=======
-        lbl22.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                lbl22KeyPressed(evt);
-            }
-        });
         getContentPane().add(lbl22);
->>>>>>> 730d4e07c5bb7d7540be1d98a9ca69e5c8f4378a
 
         txtJ1puntos.setEditable(false);
         txtJ1puntos.addActionListener(new java.awt.event.ActionListener() {
@@ -315,6 +252,7 @@ public class VsHumano extends javax.swing.JFrame {
                 txtJ1puntosActionPerformed(evt);
             }
         });
+        getContentPane().add(txtJ1puntos);
 
         btnreset.setText("Reiniciar");
         btnreset.addActionListener(new java.awt.event.ActionListener() {
@@ -322,6 +260,7 @@ public class VsHumano extends javax.swing.JFrame {
                 btnresetActionPerformed(evt);
             }
         });
+        getContentPane().add(btnreset);
 
         txtJ2puntos.setEditable(false);
         txtJ2puntos.addActionListener(new java.awt.event.ActionListener() {
@@ -329,122 +268,65 @@ public class VsHumano extends javax.swing.JFrame {
                 txtJ2puntosActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(turno, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(lblTurno, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(lbl00, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(lbl01, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(lbl02, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(lbl10, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(lbl11, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(lbl12, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(lbl20, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(lbl21, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(lbl22, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(txtJ1puntos, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(btnreset, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(txtJ2puntos, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(turno, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblTurno, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl00, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl01, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl02, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl10, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl11, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl12, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl20, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl21, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl22, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtJ1puntos, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnreset, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtJ2puntos, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
+        getContentPane().add(txtJ2puntos);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+
 
 //  MAUSE PARA EL TABLERO 
-
+    
     private void txtJ1puntosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJ1puntosActionPerformed
-
+       
     }//GEN-LAST:event_txtJ1puntosActionPerformed
 
     private void txtJ2puntosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJ2puntosActionPerformed
-
+        
     }//GEN-LAST:event_txtJ2puntosActionPerformed
 
     private void lbl00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl00MouseClicked
-        elegirPosicion(0, 0);
+        elegirPosicion(0,0);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl00MouseClicked
 
     private void lbl01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl01MouseClicked
-        elegirPosicion(0, 1);
+        elegirPosicion(0,1);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl01MouseClicked
 
     private void lbl02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl02MouseClicked
-        elegirPosicion(0, 2);
+        elegirPosicion(0,2);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl02MouseClicked
 
     private void lbl10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl10MouseClicked
-        elegirPosicion(1, 0);
+        elegirPosicion(1,0);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl10MouseClicked
 
     private void lbl11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl11MouseClicked
-        elegirPosicion(1, 1);
+        elegirPosicion(1,1);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl11MouseClicked
 
     private void lbl12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl12MouseClicked
-        elegirPosicion(1, 2);
+        elegirPosicion(1,2);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl12MouseClicked
 
     private void lbl20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl20MouseClicked
-        elegirPosicion(2, 0);
+        elegirPosicion(2,0);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl20MouseClicked
 
     private void lbl21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl21MouseClicked
-        elegirPosicion(2, 1);
+        elegirPosicion(2,1);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl21MouseClicked
 
     private void lbl22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl22MouseClicked
-        elegirPosicion(2, 2);
+        elegirPosicion(2,2);
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl22MouseClicked
 
@@ -453,43 +335,9 @@ public class VsHumano extends javax.swing.JFrame {
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_btnresetActionPerformed
 
-    private void lbl00KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl00KeyPressed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_lbl00KeyPressed
-
-    private void lbl01KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl01KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lbl01KeyPressed
-
-    private void lbl02KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl02KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lbl02KeyPressed
-
-    private void lbl10KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl10KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lbl10KeyPressed
-
-    private void lbl11KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl11KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lbl11KeyPressed
-
-    private void lbl12KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl12KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lbl12KeyPressed
-
-    private void lbl20KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl20KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lbl20KeyPressed
-
-    private void lbl21KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl21KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lbl21KeyPressed
-
-    private void lbl22KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lbl22KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lbl22KeyPressed
-
+    
+    
+    
     /**
      * @param args the command line arguments
      */
