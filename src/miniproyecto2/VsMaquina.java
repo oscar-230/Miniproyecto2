@@ -1,7 +1,21 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package miniproyecto2;
 
+import java.awt.Panel;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
-
+import java.awt.event.KeyListener;
+import javax.swing.JButton;
+import javax.swing.SwingUtilities;
+/**
+ *
+ * @author ASUS
+ */
 public class VsMaquina extends javax.swing.JFrame {
     
     int v1, v2, v3, v4, v5, v6, v7, v8, v9;
@@ -40,7 +54,7 @@ public class VsMaquina extends javax.swing.JFrame {
         fin=false;
     }
 
-    void felinoMarc(int player, int poss) {
+    void TicTac(int player, int poss) {
 
         switch (player) {
             case 1:
@@ -217,108 +231,109 @@ public class VsMaquina extends javax.swing.JFrame {
     void bloqueo() {
         //primera fila horizontal
         if (v1 == 2 && v2 == 2 && v3 == 0 && !done) {
-            felinoMarc(1, 3);
+            TicTac(1, 3);
             done = true;
         }
         if (v1 == 2 && v2 == 0 && v3 == 2 && !done) {
-            felinoMarc(1, 2);
+            TicTac(1, 2);
             done = true;
 
         }
         if (v1 == 0 && v2 == 2 && v3 == 2 && !done) {
-            felinoMarc(1, 1);
+            TicTac(1, 1);
             done = true;
         }
 
         //segunda fila horizontal
         if (v4 == 2 && v5 == 2 && v6 == 0 && !done) {
-            felinoMarc(1, 6);
+            TicTac(1, 6);
             done = true;
         }
         if (v4 == 2 && v5 == 0 && v6 == 2 && !done) {
-            felinoMarc(1, 5);
+            TicTac(1, 5);
             done = true;
         }
         if (v4 == 0 && v5 == 2 && v6 == 2 && !done) {
-            felinoMarc(1, 4);
+            TicTac(1, 4);
             done = true;
         }
         //tercera fila horizontal
         if (v7 == 2 && v8 == 2 && v9 == 0 && !done) {
-            felinoMarc(1, 9);
+            TicTac(1, 9);
             done = true;
         }
+        
         if (v7 == 2 && v8 == 0 && v9 == 2 && !done) {
-            felinoMarc(1, 8);
+            TicTac(1, 8);
             done = true;
         }
         if (v7 == 0 && v8 == 2 && v9 == 2 && !done) {
-            felinoMarc(1, 7);
+            TicTac(1, 7);
             done = true;
         }
         //primera vertical
         if (v1 == 2 && v4 == 2 && v7 == 0 && !done) {
-            felinoMarc(1, 7);
+            TicTac(1, 7);
             done = true;
         }
         if (v1 == 2 && v4 == 0 && v7 == 2 && !done) {
-            felinoMarc(1, 4);
+            TicTac(1, 4);
             done = true;
         }
         if (v1 == 0 && v4 == 2 && v7 == 2 && !done) {
-            felinoMarc(1, 1);
+            TicTac(1, 1);
             done = true;
         }
         //segunda vertical
         if (v2 == 2 && v5 == 2 && v8 == 0 && !done) {
-            felinoMarc(1, 8);
+            TicTac(1, 8);
             done = true;
         }
         if (v2 == 2 && v5 == 0 && v8 == 2 && !done) {
-            felinoMarc(1, 5);
+            TicTac(1, 5);
             done = true;
         }
         if (v2 == 0 && v5 == 2 && v8 == 2 && !done) {
-            felinoMarc(1, 2);
+            TicTac(1, 2);
             done = true;
         }
         //tercera vertical
         if (v3 == 2 && v6 == 2 && v9 == 0 && !done) {
-            felinoMarc(1, 9);
+            TicTac(1, 9);
             done = true;
         }
         if (v3 == 2 && v6 == 0 && v9 == 2 && !done) {
-            felinoMarc(1, 6);
+            TicTac(1, 6);
             done = true;
         }
         if (v3 == 0 && v6 == 2 && v9 == 2 && !done) {
-            felinoMarc(1, 3);
+            TicTac(1, 3);
             done = true;
         }
         //primera diagonal
         if (v1 == 2 && v5 == 2 && v9 == 0 && !done) {
-            felinoMarc(1, 9);
+            TicTac(1, 9);
             done = true;
         }
         if (v1 == 2 && v5 == 0 && v9 == 2 && !done) {
-            felinoMarc(1, 5);
+            TicTac(1, 5);
             done = true;
         }
         if (v1 == 0 && v5 == 2 && v9 == 2 && !done) {
-            felinoMarc(1, 1);
+            TicTac(1, 1);
             done = true;
         }
         //segunda diagonal
         if (v3 == 2 && v5 == 2 && v7 == 0 && !done) {
-            felinoMarc(1, 7);
+            TicTac(1, 7);
             done = true;
         }
         if (v3 == 2 && v5 == 0 && v7 == 2 && !done) {
-            felinoMarc(1, 5);
+            TicTac(1, 5);
             done = true;
         }
         if (v3 == 0 && v5 == 2 && v7 == 2 && !done) {
-            felinoMarc(1, 3);
+            TicTac(1, 3);
             done = true;
 
         }
@@ -331,110 +346,110 @@ public class VsMaquina extends javax.swing.JFrame {
         //
 
         if (v1 == 1 && v2 == 1 && v3 == 0 && !done) {
-            felinoMarc(1, 3);
+            TicTac(1, 3);
 
             done = true;
         }
         if (v1 == 1 && v2 == 0 && v3 == 1 && !done) {
-            felinoMarc(1, 2);
+            TicTac(1, 2);
             done = true;
 
         }
         if (v1 == 0 && v2 == 1 && v3 == 1 && !done) {
-            felinoMarc(1, 1);
+            TicTac(1, 1);
             done = true;
         }
 
         //segunda fila horizontal
         if (v4 == 1 && v5 == 1 && v6 == 0 && !done) {
-            felinoMarc(1, 6);
+            TicTac(1, 6);
             done = true;
         }
         if (v4 == 1 && v5 == 0 && v6 == 1 && !done) {
-            felinoMarc(1, 5);
+            TicTac(1, 5);
             done = true;
         }
         if (v4 == 0 && v5 == 1 && v6 == 1 && !done) {
-            felinoMarc(1, 4);
+            TicTac(1, 4);
             done = true;
         }
         //tercera fila horizontal
         if (v7 == 1 && v8 == 1 && v9 == 0 && !done) {
-            felinoMarc(1, 9);
+            TicTac(1, 9);
             done = true;
         }
         if (v7 == 1 && v8 == 0 && v9 == 1 && !done) {
-            felinoMarc(1, 8);
+            TicTac(1, 8);
             done = true;
         }
         if (v7 == 0 && v8 == 1 && v9 == 1 && !done) {
-            felinoMarc(1, 7);
+            TicTac(1, 7);
             done = true;
         }
         //primera vertical
         if (v1 == 1 && v4 == 1 && v7 == 0 && !done) {
-            felinoMarc(1, 7);
+            TicTac(1, 7);
             done = true;
         }
         if (v1 == 1 && v4 == 0 && v7 == 1 && !done) {
-            felinoMarc(1, 4);
+            TicTac(1, 4);
             done = true;
         }
         if (v1 == 0 && v4 == 1 && v7 == 1 && !done) {
-            felinoMarc(1, 1);
+            TicTac(1, 1);
             done = true;
         }
         //segunda vertical
         if (v2 == 1 && v5 == 1 && v8 == 0 && !done) {
-            felinoMarc(1, 8);
+            TicTac(1, 8);
             done = true;
         }
         if (v2 == 1 && v5 == 0 && v8 == 1 && !done) {
-            felinoMarc(1, 5);
+            TicTac(1, 5);
             done = true;
         }
         if (v2 == 0 && v5 == 1 && v8 == 1 && !done) {
-            felinoMarc(1, 2);
+            TicTac(1, 2);
             done = true;
         }
         //tercera vertical
         if (v3 == 1 && v6 == 1 && v9 == 0 && !done) {
-            felinoMarc(1, 9);
+            TicTac(1, 9);
             done = true;
         }
         if (v3 == 1 && v6 == 0 && v9 == 1 && !done) {
-            felinoMarc(1, 6);
+            TicTac(1, 6);
             done = true;
         }
         if (v3 == 0 && v6 == 1 && v9 == 1 && !done) {
-            felinoMarc(1, 3);
+            TicTac(1, 3);
 
             done = true;
         }
         //primera diagonal
         if (v1 == 1 && v5 == 1 && v9 == 0 && !done) {
-            felinoMarc(1, 9);
+            TicTac(1, 9);
             done = true;
         }
         if (v1 == 1 && v5 == 0 && v9 == 1 && !done) {
-            felinoMarc(1, 5);
+            TicTac(1, 5);
             done = true;
         }
         if (v1 == 0 && v5 == 1 && v9 == 1 && !done) {
-            felinoMarc(1, 1);
+            TicTac(1, 1);
             done = true;
         }
         //segunda diagonal
         if (v3 == 1 && v5 == 1 && v7 == 0 && !done) {
-            felinoMarc(1, 7);
+            TicTac(1, 7);
             done = true;
         }
         if (v3 == 1 && v5 == 0 && v7 == 1 && !done) {
-            felinoMarc(1, 5);
+            TicTac(1, 5);
             done = true;
         }
         if (v3 == 0 && v5 == 1 && v7 == 1 && !done) {
-            felinoMarc(1, 3);
+            TicTac(1, 3);
 
             done = true;
         }
@@ -445,7 +460,7 @@ public class VsMaquina extends javax.swing.JFrame {
     void centro() {
 
         if (v5 == 0 && !done) {
-            felinoMarc(1, 5);
+            TicTac(1, 5);
             done = true;
         }
 
@@ -453,41 +468,41 @@ public class VsMaquina extends javax.swing.JFrame {
 
     void recorrer() {
         if (v1 == 0 && !done) {
-            felinoMarc(1, 1);
+            TicTac(1, 1);
             done = true;
         }
         if (v2 == 0 && !done) {
-            felinoMarc(1, 2);
+            TicTac(1, 2);
             done = true;
             System.out.println("2");
         }
         if (v3 == 0 && !done) {
-            felinoMarc(1, 3);
+            TicTac(1, 3);
             done = true;
             System.out.println("3");
         }
         if (v4 == 0 && !done) {
-            felinoMarc(1, 4);
+            TicTac(1, 4);
             done = true;
         }
         if (v5 == 0 && !done) {
-            felinoMarc(1, 5);
+            TicTac(1, 5);
             done = true;
         }
         if (v6 == 0 && !done) {
-            felinoMarc(1, 6);
+            TicTac(1, 6);
             done = true;
         }
         if (v7 == 0 && !done) {
-            felinoMarc(1, 7);
+            TicTac(1, 7);
             done = true;
         }
         if (v8 == 0 && !done) {
-            felinoMarc(1, 8);
+            TicTac(1, 8);
             done = true;
         }
         if (v9 == 0 && !done) {
-            felinoMarc(1, 9);
+            TicTac(1, 9);
             done = true;
         }
 
@@ -495,23 +510,23 @@ public class VsMaquina extends javax.swing.JFrame {
 
    void allBloqueo(){
             if(v4==2&&v5==1&&v9==2&&v7==0&&!done){
-                felinoMarc(1,7);
+                TicTac(1,7);
                 done=true;
             }
             if(v1==2&&v5==1&&v9==2&&v8==0&& !done){
-                felinoMarc(1,8);
+                TicTac(1,8);
                 done=true;
             }
             if(v3==2&&v5==1&&v7==2&&v4==0&& !done){
-                felinoMarc(1,4);
+                TicTac(1,4);
                 done=true;
             }
             if(v3==2&&v5==1&&v8==2&&v6==0&&!done){
-                felinoMarc(1,6);
+                TicTac(1,6);
                 done=true;
             }
             if(v1==2&&v5==1&&v8==2&&v7==0&&!done){
-                felinoMarc(1,7);
+                TicTac(1,7);
                 done=true;
             }
 
@@ -535,7 +550,7 @@ public class VsMaquina extends javax.swing.JFrame {
 
         //esta funcion comprueba si puede ganar
         if (!done && !fin) {
-            //System.out.println("gaanar");
+            System.out.println("gaanar");
             ganar();
         }
 
@@ -543,7 +558,7 @@ public class VsMaquina extends javax.swing.JFrame {
 
         if (!done && !fin) {
             bloqueo();
-            //System.out.println("bloqueo");
+            System.out.println("bloqueo");
         }
 
         //tira en el centro en caso de que este vacio
@@ -558,7 +573,7 @@ public class VsMaquina extends javax.swing.JFrame {
         //si no puedo hacer nada de lo anterior
 
         if (!done && !fin && v3 == 0) {
-            felinoMarc(1, 3);
+            TicTac(1, 3);
             done=true;
         }
         //funcion  de comprobacion de casillas vacias
@@ -580,16 +595,20 @@ public class VsMaquina extends javax.swing.JFrame {
         }
 
         if(v1!=0&&v2!=0&&v3!=0&&v4!=0&&v5!=0&&v6!=0&&v7!=0&&v8!=0&&v9!=0){
-            JOptionPane.showMessageDialog(null, "EMPATE ", "TIC TAC", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null, "EMPATES ", "TIC TAC", JOptionPane.PLAIN_MESSAGE);
             reset();
         }
 
     }
 
     /** Creates new form NewJFrame */
+    
     public VsMaquina() {
         initComponents();
     }
+   
+ 
+    
 
    
     @SuppressWarnings("unchecked")
@@ -621,6 +640,11 @@ public class VsMaquina extends javax.swing.JFrame {
                 p1ActionPerformed(evt);
             }
         });
+        p1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                p1KeyPressed(evt);
+            }
+        });
 
         p2.setBackground(new java.awt.Color(51, 255, 255));
         p2.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
@@ -628,6 +652,11 @@ public class VsMaquina extends javax.swing.JFrame {
         p2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p2ActionPerformed(evt);
+            }
+        });
+        p2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                p2KeyPressed(evt);
             }
         });
 
@@ -639,6 +668,11 @@ public class VsMaquina extends javax.swing.JFrame {
                 p3ActionPerformed(evt);
             }
         });
+        p3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                p3KeyPressed(evt);
+            }
+        });
 
         p7.setBackground(new java.awt.Color(51, 255, 255));
         p7.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
@@ -646,6 +680,11 @@ public class VsMaquina extends javax.swing.JFrame {
         p7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p7ActionPerformed(evt);
+            }
+        });
+        p7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                p7KeyPressed(evt);
             }
         });
 
@@ -657,6 +696,11 @@ public class VsMaquina extends javax.swing.JFrame {
                 p8ActionPerformed(evt);
             }
         });
+        p8.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                p8KeyPressed(evt);
+            }
+        });
 
         p9.setBackground(new java.awt.Color(51, 255, 255));
         p9.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
@@ -664,6 +708,11 @@ public class VsMaquina extends javax.swing.JFrame {
         p9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p9ActionPerformed(evt);
+            }
+        });
+        p9.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                p9KeyPressed(evt);
             }
         });
 
@@ -675,6 +724,11 @@ public class VsMaquina extends javax.swing.JFrame {
                 p4ActionPerformed(evt);
             }
         });
+        p4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                p4KeyPressed(evt);
+            }
+        });
 
         p5.setBackground(new java.awt.Color(51, 255, 255));
         p5.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
@@ -684,6 +738,11 @@ public class VsMaquina extends javax.swing.JFrame {
                 p5ActionPerformed(evt);
             }
         });
+        p5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                p5KeyPressed(evt);
+            }
+        });
 
         p6.setBackground(new java.awt.Color(51, 255, 255));
         p6.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
@@ -691,6 +750,11 @@ public class VsMaquina extends javax.swing.JFrame {
         p6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p6ActionPerformed(evt);
+            }
+        });
+        p6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                p6KeyPressed(evt);
             }
         });
 
@@ -761,64 +825,141 @@ public class VsMaquina extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void p1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p1ActionPerformed
-        
-        felinoMarc(2, 1);
+        // TODO add your handling code here:;
+        TicTac(2, 1);
         machine();
     }//GEN-LAST:event_p1ActionPerformed
 
     private void p2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p2ActionPerformed
-        
-        felinoMarc(2, 2);
+        // TODO add your handling code here:
+        TicTac(2, 2);
         machine();
     }//GEN-LAST:event_p2ActionPerformed
 
     private void p3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p3ActionPerformed
-        
-        felinoMarc(2, 3);
+        // TODO add your handling code here:
+        TicTac(2, 3);
         machine();
     }//GEN-LAST:event_p3ActionPerformed
 
     private void p4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p4ActionPerformed
-        
-        felinoMarc(2, 4);
+        // TODO add your handling code here:
+        TicTac(2, 4);
         machine();
     }//GEN-LAST:event_p4ActionPerformed
 
     private void p5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p5ActionPerformed
-      
-        felinoMarc(2, 5);
+        // TODO add your handling code here:
+        TicTac(2, 5);
         machine();
     }//GEN-LAST:event_p5ActionPerformed
 
     private void p6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p6ActionPerformed
-       
-        felinoMarc(2, 6);
+        // TODO add your handling code here:
+        TicTac(2, 6);
         machine();
     }//GEN-LAST:event_p6ActionPerformed
 
     private void p7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p7ActionPerformed
-        
-        felinoMarc(2, 7);
+        // TODO add your handling code here:
+        TicTac(2, 7);
         machine();
     }//GEN-LAST:event_p7ActionPerformed
 
     private void p8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p8ActionPerformed
-        
-        felinoMarc(2, 8);
+        // TODO add your handling code here:
+        TicTac(2, 8);
         machine();
     }//GEN-LAST:event_p8ActionPerformed
 
     private void p9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p9ActionPerformed
-        
-        felinoMarc(2, 9);
+        // TODO add your handling code here:
+        TicTac(2, 9);
         machine();
     }//GEN-LAST:event_p9ActionPerformed
 
+    private void p1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p1KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            p1.doClick();
+        }
+    }//GEN-LAST:event_p1KeyPressed
+
+    private void p2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p2KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            p2.doClick();
+        }
+    }//GEN-LAST:event_p2KeyPressed
+
+    private void p3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p3KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            p3.doClick();
+        }
+    }//GEN-LAST:event_p3KeyPressed
+
+    private void p4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p4KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            p4.doClick();
+        }
+    }//GEN-LAST:event_p4KeyPressed
+
+    private void p5KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p5KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            p5.doClick();
+        }
+    }//GEN-LAST:event_p5KeyPressed
+
+    private void p6KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p6KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            p6.doClick();
+        }
+    }//GEN-LAST:event_p6KeyPressed
+
+    private void p7KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p7KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            p7.doClick();
+        }
+    }//GEN-LAST:event_p7KeyPressed
+
+    private void p8KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p8KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            p8.doClick();
+        }
+    }//GEN-LAST:event_p8KeyPressed
+
+    private void p9KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p9KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            p9.doClick();
+        }
+    }//GEN-LAST:event_p9KeyPressed
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(VsMaquina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(VsMaquina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(VsMaquina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(VsMaquina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
