@@ -114,7 +114,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playActionPerformed
         // TODO add your handling code here:
-        nombres newframe = new nombres();
+        MenuDeJuego newframe = new MenuDeJuego();
         newframe.setVisible(true);
         this.dispose();//para que no se acumulen las ventanas
     }//GEN-LAST:event_playActionPerformed
