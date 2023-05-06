@@ -166,7 +166,7 @@ public class VsHumano extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TicTacToe");
-        setBackground(new java.awt.Color(153, 255, 255));
+        setBackground(new java.awt.Color(255, 255, 0));
         setMinimumSize(new java.awt.Dimension(500, 400));
         setResizable(false);
 
@@ -184,7 +184,7 @@ public class VsHumano extends javax.swing.JFrame {
             }
         });
 
-        lbl01.setBackground(new java.awt.Color(204, 255, 204));
+        lbl01.setBackground(new java.awt.Color(0, 0, 102));
         lbl01.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl01MouseClicked(evt);
