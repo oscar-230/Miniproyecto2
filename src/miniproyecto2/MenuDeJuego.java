@@ -15,7 +15,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        Puntos = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jugador1 = new javax.swing.JLabel();
@@ -75,6 +75,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
         Partida1.setText("PUNTOS PARA GANAR");
 
         jRadioButton1.setBackground(new java.awt.Color(255, 255, 0));
+        Puntos.add(jRadioButton1);
         jRadioButton1.setText("1");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +84,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
         });
 
         jRadioButton2.setBackground(new java.awt.Color(255, 255, 0));
+        Puntos.add(jRadioButton2);
         jRadioButton2.setText("2");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +93,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
         });
 
         jRadioButton3.setBackground(new java.awt.Color(255, 255, 0));
+        Puntos.add(jRadioButton3);
         jRadioButton3.setText("3");
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,6 +102,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
         });
 
         jRadioButton4.setBackground(new java.awt.Color(255, 255, 0));
+        Puntos.add(jRadioButton4);
         jRadioButton4.setText("4");
         jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -284,7 +288,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Partida;
     private javax.swing.JLabel Partida1;
-    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup Puntos;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
