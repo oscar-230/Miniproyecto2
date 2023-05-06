@@ -130,14 +130,14 @@ public class nombres extends javax.swing.JFrame {
 
     private void personaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personaActionPerformed
         // ESPACIO L¿PARA ANCLAR A LA VENTANA PROXIMA
-        FormTicTacToe newframe = new FormTicTacToe();
+        VsHumano newframe = new VsHumano();
         newframe.setVisible(true);
         this.dispose();//para que no se acumulen las ventanas
     }//GEN-LAST:event_personaActionPerformed
 
     private void maquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maquinaActionPerformed
         // TODO add your handling code here:
-        NewJFrame newframe = new NewJFrame();
+        VsMaquina newframe = new VsMaquina();
         newframe.setVisible(true);
         this.dispose();//para que no se acumulen las ventanas
     }//GEN-LAST:event_maquinaActionPerformed

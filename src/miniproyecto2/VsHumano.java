@@ -11,7 +11,7 @@ import javax.swing.border.Border;
 
 
 
-public class FormTicTacToe extends javax.swing.JFrame {
+public class VsHumano extends javax.swing.JFrame {
     private TicTacToe juego;
     private JLabel[][] tablero;
     private int J1Puntos;
@@ -21,7 +21,7 @@ public class FormTicTacToe extends javax.swing.JFrame {
     /**
      * Creates new form FormTicTacToe
      */
-    public FormTicTacToe() {
+    public VsHumano() {
         initComponents();
         
         // Para crear el tablero
@@ -286,27 +286,27 @@ public class FormTicTacToe extends javax.swing.JFrame {
 
     private void lbl00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl00MouseClicked
         elegirPosicion(0,0);
-        System.out.println("AQUI PASO");
+        //System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl00MouseClicked
 
     private void lbl01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl01MouseClicked
         elegirPosicion(0,1);
-        System.out.println("AQUI PASO");
+        //System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl01MouseClicked
 
     private void lbl02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl02MouseClicked
         elegirPosicion(0,2);
-        System.out.println("AQUI PASO");
+        //System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl02MouseClicked
 
     private void lbl10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl10MouseClicked
         elegirPosicion(1,0);
-        System.out.println("AQUI PASO");
+        //System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl10MouseClicked
 
     private void lbl11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl11MouseClicked
        elegirPosicion(1,1);
-        System.out.println("AQUI PASO");
+        //System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl11MouseClicked
 
     private void lbl12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl12MouseClicked
@@ -316,22 +316,22 @@ public class FormTicTacToe extends javax.swing.JFrame {
 
     private void lbl20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl20MouseClicked
         elegirPosicion(2,0);
-        System.out.println("AQUI PASO");
+        //System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl20MouseClicked
 
     private void lbl21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl21MouseClicked
         elegirPosicion(2,1);
-        System.out.println("AQUI PASO");
+        //System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl21MouseClicked
 
     private void lbl22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl22MouseClicked
         elegirPosicion(2,2);
-        System.out.println("AQUI PASO");
+        //System.out.println("AQUI PASO");
     }//GEN-LAST:event_lbl22MouseClicked
 
     private void btnresetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnresetActionPerformed
         reset();
-        System.out.println("AQUI PASO");
+        //System.out.println("AQUI PASO");
     }//GEN-LAST:event_btnresetActionPerformed
 
     
@@ -354,20 +354,21 @@ public class FormTicTacToe extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FormTicTacToe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VsHumano.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FormTicTacToe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VsHumano.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FormTicTacToe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VsHumano.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FormTicTacToe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VsHumano.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FormTicTacToe().setVisible(true);
+                new VsHumano().setVisible(true);
             }
         });
     }

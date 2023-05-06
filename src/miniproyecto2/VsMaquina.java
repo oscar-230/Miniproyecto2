@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  *
  * @author ASUS
  */
-public class NewJFrame extends javax.swing.JFrame {
+public class VsMaquina extends javax.swing.JFrame {
     
     int v1, v2, v3, v4, v5, v6, v7, v8, v9;
     boolean done = false;
@@ -545,7 +545,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         //esta funcion comprueba si puede ganar
         if (!done && !fin) {
-            System.out.println("gaanar");
+            //System.out.println("gaanar");
             ganar();
         }
 
@@ -553,7 +553,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         if (!done && !fin) {
             bloqueo();
-            System.out.println("bloqueo");
+            //System.out.println("bloqueo");
         }
 
         //tira en el centro en caso de que este vacio
@@ -590,14 +590,14 @@ public class NewJFrame extends javax.swing.JFrame {
         }
 
         if(v1!=0&&v2!=0&&v3!=0&&v4!=0&&v5!=0&&v6!=0&&v7!=0&&v8!=0&&v9!=0){
-            JOptionPane.showMessageDialog(null, "EMPATES ", "TIC TAC", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null, "EMPATE ", "TIC TAC", JOptionPane.PLAIN_MESSAGE);
             reset();
         }
 
     }
 
     /** Creates new form NewJFrame */
-    public NewJFrame() {
+    public VsMaquina() {
         initComponents();
     }
 
@@ -840,21 +840,23 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VsMaquina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VsMaquina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VsMaquina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VsMaquina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewJFrame().setVisible(true);
+                new VsMaquina().setVisible(true);
             }
         });
     }
