@@ -1,17 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package miniproyecto2;
 
 import java.awt.Panel;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
-import java.awt.event.KeyListener;
-import javax.swing.JButton;
-import javax.swing.SwingUtilities;
+
 /**
  *
  * @author ASUS
@@ -605,6 +598,7 @@ public class VsMaquina extends javax.swing.JFrame {
     
     public VsMaquina() {
         initComponents();
+        
     }
    
  

@@ -21,6 +21,7 @@ public class VsHumano extends javax.swing.JFrame {
      */
     public VsHumano() {
         initComponents();
+        
 
         // Para crear el tablero
         JLabel[][] t = {
