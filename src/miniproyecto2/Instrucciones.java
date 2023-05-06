@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package miniproyecto2;
 
-/**
- *
- * @author User
- */
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -63,7 +56,7 @@ public class Instrucciones extends JFrame {
         //instrucciones = new JLabel(texto);
         instrucciones = new JTextArea();
         instrucciones.setEditable(false);
-        instrucciones.setFont(new Font("Calibri",Font.PLAIN,18));
+        instrucciones.setFont(new Font("Calibri",Font.PLAIN,19));
         instrucciones.setBounds(25,100, 450,300);
         instrucciones.setBackground(new Color(0,0,0));
         instrucciones.setForeground(new Color(255,255,255));
