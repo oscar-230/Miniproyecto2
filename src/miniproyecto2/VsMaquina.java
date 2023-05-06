@@ -543,7 +543,7 @@ public class VsMaquina extends javax.swing.JFrame {
 
         //esta funcion comprueba si puede ganar
         if (!done && !fin) {
-            System.out.println("gaanar");
+            System.out.println("ganar");
             ganar();
         }
 
@@ -588,7 +588,7 @@ public class VsMaquina extends javax.swing.JFrame {
         }
 
         if(v1!=0&&v2!=0&&v3!=0&&v4!=0&&v5!=0&&v6!=0&&v7!=0&&v8!=0&&v9!=0){
-            JOptionPane.showMessageDialog(null, "EMPATES ", "TIC TAC", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null, "EMPATE ", "TIC TAC", JOptionPane.PLAIN_MESSAGE);
             reset();
         }
 
@@ -726,7 +726,7 @@ public class VsMaquina extends javax.swing.JFrame {
 
         p5.setBackground(new java.awt.Color(204, 255, 204));
         p5.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        p5.setForeground(new java.awt.Color(204, 255, 204));
+        p5.setForeground(new java.awt.Color(204, 0, 153));
         p5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p5ActionPerformed(evt);
@@ -951,6 +951,12 @@ public class VsMaquina extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(VsMaquina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
