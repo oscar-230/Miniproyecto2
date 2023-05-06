@@ -274,7 +274,7 @@ public class VsHumano extends javax.swing.JFrame {
     
 
 
-//  MAUSE PARA EL TABLERO 
+//  MOUSE PARA EL TABLERO 
     
     private void txtJ1puntosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJ1puntosActionPerformed
        
@@ -286,52 +286,52 @@ public class VsHumano extends javax.swing.JFrame {
 
     private void lbl00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl00MouseClicked
         elegirPosicion(0,0);
-        //System.out.println("AQUI PASO");
+        
     }//GEN-LAST:event_lbl00MouseClicked
 
     private void lbl01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl01MouseClicked
         elegirPosicion(0,1);
-        //System.out.println("AQUI PASO");
+        
     }//GEN-LAST:event_lbl01MouseClicked
 
     private void lbl02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl02MouseClicked
         elegirPosicion(0,2);
-        //System.out.println("AQUI PASO");
+        
     }//GEN-LAST:event_lbl02MouseClicked
 
     private void lbl10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl10MouseClicked
         elegirPosicion(1,0);
-        //System.out.println("AQUI PASO");
+        
     }//GEN-LAST:event_lbl10MouseClicked
 
     private void lbl11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl11MouseClicked
        elegirPosicion(1,1);
-        //System.out.println("AQUI PASO");
+        
     }//GEN-LAST:event_lbl11MouseClicked
 
     private void lbl12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl12MouseClicked
        elegirPosicion(1,2);
-        System.out.println("AQUI PASO");
+        
     }//GEN-LAST:event_lbl12MouseClicked
 
     private void lbl20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl20MouseClicked
         elegirPosicion(2,0);
-        //System.out.println("AQUI PASO");
+        
     }//GEN-LAST:event_lbl20MouseClicked
 
     private void lbl21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl21MouseClicked
         elegirPosicion(2,1);
-        //System.out.println("AQUI PASO");
+        
     }//GEN-LAST:event_lbl21MouseClicked
 
     private void lbl22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl22MouseClicked
         elegirPosicion(2,2);
-        //System.out.println("AQUI PASO");
+        
     }//GEN-LAST:event_lbl22MouseClicked
 
     private void btnresetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnresetActionPerformed
         reset();
-        //System.out.println("AQUI PASO");
+        
     }//GEN-LAST:event_btnresetActionPerformed
 
     
