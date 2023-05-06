@@ -611,6 +611,7 @@ public class VsMaquina extends javax.swing.JFrame {
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        setLocation(500, 200);
 
         p1.setBackground(new java.awt.Color(51, 255, 255));
         p1.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
