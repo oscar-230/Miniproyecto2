@@ -543,7 +543,7 @@ public class VsMaquina extends javax.swing.JFrame {
 
         //esta funcion comprueba si puede ganar
         if (!done && !fin) {
-            System.out.println("gaanar");
+            System.out.println("ganar");
             ganar();
         }
 
@@ -588,7 +588,7 @@ public class VsMaquina extends javax.swing.JFrame {
         }
 
         if(v1!=0&&v2!=0&&v3!=0&&v4!=0&&v5!=0&&v6!=0&&v7!=0&&v8!=0&&v9!=0){
-            JOptionPane.showMessageDialog(null, "EMPATES ", "TIC TAC", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null, "EMPATE ", "TIC TAC", JOptionPane.PLAIN_MESSAGE);
             reset();
         }
 
@@ -623,10 +623,10 @@ public class VsMaquina extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 0));
         setLocation(500, 200);
 
-        p1.setBackground(new java.awt.Color(51, 255, 255));
+        p1.setBackground(new java.awt.Color(204, 255, 204));
         p1.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
         p1.setForeground(new java.awt.Color(204, 0, 204));
         p1.addActionListener(new java.awt.event.ActionListener() {
@@ -640,7 +640,7 @@ public class VsMaquina extends javax.swing.JFrame {
             }
         });
 
-        p2.setBackground(new java.awt.Color(51, 255, 255));
+        p2.setBackground(new java.awt.Color(204, 255, 204));
         p2.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
         p2.setForeground(new java.awt.Color(204, 0, 204));
         p2.addActionListener(new java.awt.event.ActionListener() {
@@ -654,7 +654,7 @@ public class VsMaquina extends javax.swing.JFrame {
             }
         });
 
-        p3.setBackground(new java.awt.Color(51, 255, 255));
+        p3.setBackground(new java.awt.Color(204, 255, 204));
         p3.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
         p3.setForeground(new java.awt.Color(204, 0, 204));
         p3.addActionListener(new java.awt.event.ActionListener() {
@@ -668,7 +668,7 @@ public class VsMaquina extends javax.swing.JFrame {
             }
         });
 
-        p7.setBackground(new java.awt.Color(51, 255, 255));
+        p7.setBackground(new java.awt.Color(204, 255, 204));
         p7.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
         p7.setForeground(new java.awt.Color(204, 0, 204));
         p7.addActionListener(new java.awt.event.ActionListener() {
@@ -682,7 +682,7 @@ public class VsMaquina extends javax.swing.JFrame {
             }
         });
 
-        p8.setBackground(new java.awt.Color(51, 255, 255));
+        p8.setBackground(new java.awt.Color(204, 255, 204));
         p8.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
         p8.setForeground(new java.awt.Color(204, 0, 204));
         p8.addActionListener(new java.awt.event.ActionListener() {
@@ -696,7 +696,7 @@ public class VsMaquina extends javax.swing.JFrame {
             }
         });
 
-        p9.setBackground(new java.awt.Color(51, 255, 255));
+        p9.setBackground(new java.awt.Color(204, 255, 204));
         p9.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
         p9.setForeground(new java.awt.Color(204, 0, 204));
         p9.addActionListener(new java.awt.event.ActionListener() {
@@ -710,7 +710,7 @@ public class VsMaquina extends javax.swing.JFrame {
             }
         });
 
-        p4.setBackground(new java.awt.Color(51, 255, 255));
+        p4.setBackground(new java.awt.Color(204, 255, 204));
         p4.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
         p4.setForeground(new java.awt.Color(204, 0, 204));
         p4.addActionListener(new java.awt.event.ActionListener() {
@@ -724,9 +724,9 @@ public class VsMaquina extends javax.swing.JFrame {
             }
         });
 
-        p5.setBackground(new java.awt.Color(51, 255, 255));
+        p5.setBackground(new java.awt.Color(204, 255, 204));
         p5.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        p5.setForeground(new java.awt.Color(204, 0, 204));
+        p5.setForeground(new java.awt.Color(204, 0, 153));
         p5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p5ActionPerformed(evt);
@@ -738,7 +738,7 @@ public class VsMaquina extends javax.swing.JFrame {
             }
         });
 
-        p6.setBackground(new java.awt.Color(51, 255, 255));
+        p6.setBackground(new java.awt.Color(204, 255, 204));
         p6.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
         p6.setForeground(new java.awt.Color(204, 0, 153));
         p6.addActionListener(new java.awt.event.ActionListener() {
@@ -951,6 +951,12 @@ public class VsMaquina extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(VsMaquina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 

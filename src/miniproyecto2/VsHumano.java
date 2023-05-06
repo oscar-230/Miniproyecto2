@@ -166,85 +166,73 @@ public class VsHumano extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TicTacToe");
-        setBackground(new java.awt.Color(153, 255, 255));
+        setBackground(new java.awt.Color(255, 255, 0));
         setMinimumSize(new java.awt.Dimension(500, 400));
         setResizable(false);
-        getContentPane().setLayout(new java.awt.GridLayout(5, 3));
-        getContentPane().add(jLabel1);
 
         turno.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         turno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         turno.setText("Turno");
-        getContentPane().add(turno);
 
         lblTurno.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lblTurno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTurno.setText("J1");
-        getContentPane().add(lblTurno);
 
         lbl00.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl00MouseClicked(evt);
             }
         });
-        getContentPane().add(lbl00);
 
+        lbl01.setBackground(new java.awt.Color(0, 0, 102));
         lbl01.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl01MouseClicked(evt);
             }
         });
-        getContentPane().add(lbl01);
 
-        lbl02.setBackground(new java.awt.Color(102, 255, 255));
+        lbl02.setBackground(new java.awt.Color(204, 255, 204));
         lbl02.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl02MouseClicked(evt);
             }
         });
-        getContentPane().add(lbl02);
 
         lbl10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl10MouseClicked(evt);
             }
         });
-        getContentPane().add(lbl10);
 
         lbl11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl11MouseClicked(evt);
             }
         });
-        getContentPane().add(lbl11);
 
         lbl12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl12MouseClicked(evt);
             }
         });
-        getContentPane().add(lbl12);
 
         lbl20.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl20MouseClicked(evt);
             }
         });
-        getContentPane().add(lbl20);
 
         lbl21.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl21MouseClicked(evt);
             }
         });
-        getContentPane().add(lbl21);
 
         lbl22.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl22MouseClicked(evt);
             }
         });
-        getContentPane().add(lbl22);
 
         txtJ1puntos.setEditable(false);
         txtJ1puntos.addActionListener(new java.awt.event.ActionListener() {
@@ -252,7 +240,6 @@ public class VsHumano extends javax.swing.JFrame {
                 txtJ1puntosActionPerformed(evt);
             }
         });
-        getContentPane().add(txtJ1puntos);
 
         btnreset.setText("Reiniciar");
         btnreset.addActionListener(new java.awt.event.ActionListener() {
@@ -260,7 +247,6 @@ public class VsHumano extends javax.swing.JFrame {
                 btnresetActionPerformed(evt);
             }
         });
-        getContentPane().add(btnreset);
 
         txtJ2puntos.setEditable(false);
         txtJ2puntos.addActionListener(new java.awt.event.ActionListener() {
@@ -268,22 +254,71 @@ public class VsHumano extends javax.swing.JFrame {
                 txtJ2puntosActionPerformed(evt);
             }
         });
-        getContentPane().add(txtJ2puntos);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(turno, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(lblTurno, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(lbl00, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(lbl01, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(lbl02, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(lbl10, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(lbl11, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(lbl12, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(lbl20, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(lbl21, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(lbl22, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(txtJ1puntos, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnreset, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(txtJ2puntos, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(turno, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTurno, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl00, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl01, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl02, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl10, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl11, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl12, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl20, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl21, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl22, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtJ1puntos, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnreset, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtJ2puntos, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
 
-
-//  MAUSE PARA EL TABLERO 
-    
-    private void txtJ1puntosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJ1puntosActionPerformed
-       
-    }//GEN-LAST:event_txtJ1puntosActionPerformed
-
-    private void txtJ2puntosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJ2puntosActionPerformed
-        
-    }//GEN-LAST:event_txtJ2puntosActionPerformed
 
     private void lbl00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl00MouseClicked
         elegirPosicion(0,0);
@@ -334,6 +369,16 @@ public class VsHumano extends javax.swing.JFrame {
         reset();
         System.out.println("AQUI PASO");
     }//GEN-LAST:event_btnresetActionPerformed
+
+//  MAUSE PARA EL TABLERO 
+    
+    private void txtJ1puntosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJ1puntosActionPerformed
+
+    }//GEN-LAST:event_txtJ1puntosActionPerformed
+
+    private void txtJ2puntosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJ2puntosActionPerformed
+
+    }//GEN-LAST:event_txtJ2puntosActionPerformed
 
     
     
