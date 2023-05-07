@@ -204,7 +204,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
         if(!nombre.trim().isEmpty() || nombre.trim().length() > 0){
             Jugador jugador = new Jugador(nombre);
             dispose();
-            VsMaquina newframe = new VsMaquina();
+            PlayerVsPC newframe = new PlayerVsPC();
             newframe.setVisible(true);
             this.dispose();//para que no se acumulen las ventanas
             } else {
