@@ -51,11 +51,11 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         button01 = new javax.swing.JButton();
         button02 = new javax.swing.JButton();
         button10 = new javax.swing.JButton();
+        button11 = new javax.swing.JButton();
+        button12 = new javax.swing.JButton();
         button20 = new javax.swing.JButton();
         button21 = new javax.swing.JButton();
         button22 = new javax.swing.JButton();
-        button11 = new javax.swing.JButton();
-        button12 = new javax.swing.JButton();
         PuntajeJ1 = new javax.swing.JTextField();
         PuntajeJ2 = new javax.swing.JTextField();
         NombreJ2 = new javax.swing.JTextField();
@@ -122,6 +122,34 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
             }
         });
 
+        button11.setBackground(new java.awt.Color(204, 255, 204));
+        button11.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
+        button11.setForeground(new java.awt.Color(204, 0, 153));
+        button11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button11ActionPerformed(evt);
+            }
+        });
+        button11.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                button11KeyPressed(evt);
+            }
+        });
+
+        button12.setBackground(new java.awt.Color(204, 255, 204));
+        button12.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
+        button12.setForeground(new java.awt.Color(204, 0, 153));
+        button12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button12ActionPerformed(evt);
+            }
+        });
+        button12.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                button12KeyPressed(evt);
+            }
+        });
+
         button20.setBackground(new java.awt.Color(204, 255, 204));
         button20.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
         button20.setForeground(new java.awt.Color(204, 0, 204));
@@ -161,34 +189,6 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         button22.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 button22KeyPressed(evt);
-            }
-        });
-
-        button11.setBackground(new java.awt.Color(204, 255, 204));
-        button11.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button11.setForeground(new java.awt.Color(204, 0, 153));
-        button11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button11ActionPerformed(evt);
-            }
-        });
-        button11.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                button11KeyPressed(evt);
-            }
-        });
-
-        button12.setBackground(new java.awt.Color(204, 255, 204));
-        button12.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button12.setForeground(new java.awt.Color(204, 0, 153));
-        button12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button12ActionPerformed(evt);
-            }
-        });
-        button12.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                button12KeyPressed(evt);
             }
         });
 
@@ -239,10 +239,10 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
                 .addGap(0, 30, Short.MAX_VALUE))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(NombreJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(NombreJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(NombreJ2)
-                .addContainerGap())
+                .addComponent(NombreJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
