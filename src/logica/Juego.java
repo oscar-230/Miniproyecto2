@@ -3,19 +3,14 @@ package logica;
 
 import modelo.Jugador;
 
-
-/**
- *
- * @author Sebastián
- */
 public class Juego {
-   
+    private String [] Tematica;
     private Jugador jugador;
     private Jugador jugadorEst;
     
     public Juego(Jugador jugador, String Tematica[]){
         this.jugador = jugador;
-        
+        this.Tematica = Tematica;
     }
     
     public Juego(Jugador jugadorEst){
@@ -26,10 +21,19 @@ public class Juego {
         return jugador.getNombre();
     }
 
-    public int getPuntos(){
-        return jugadorEst.getPuntos();
+    public String[] getTematica() {
+        return Tematica;
     }
     
+    public int getPalabras(){
+        return jugadorEst.getPalabras();
+    }
     
+    public int getAciertos(){
+        return jugadorEst.getAciertos();
+    }
+    
+    public int getFallos(){
+        return jugadorEst.getFallos();
+    }
 }
-

@@ -199,7 +199,8 @@ public class MenuDeJuego extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    
     private void maquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maquinaActionPerformed
        String nombre =jTextField1.getText();
         if(!nombre.trim().isEmpty() || nombre.trim().length() > 0){
