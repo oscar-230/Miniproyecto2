@@ -171,17 +171,18 @@ public class MenuDeJuego extends javax.swing.JFrame {
                     .addComponent(Partida, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(Partida1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jRadioButton1)
                             .addComponent(jRadioButton2)
                             .addComponent(jRadioButton3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton4)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                        .addComponent(jRadioButton4)
+                        .addContainerGap(27, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Partida1)
+                        .addGap(42, 42, 42))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -219,7 +220,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
         if((!nombre.trim().isEmpty() || nombre.trim().length() > 0) && (!nombre2.trim().isEmpty() || nombre2.trim().length() > 0)){
             Jugador jugador = new Jugador(nombre);
             dispose();
-            VsHumano newframe = new VsHumano();
+            PlayerVsPlayer newframe = new PlayerVsPlayer();
             newframe.setVisible(true);
             this.dispose();//para que no se acumulen las ventanas
             } else {
