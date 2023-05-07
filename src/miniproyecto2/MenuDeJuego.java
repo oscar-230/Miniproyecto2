@@ -1,5 +1,6 @@
 package miniproyecto2;
 
+import modelo.Jugador;
 import javax.swing.JOptionPane;
 
 
