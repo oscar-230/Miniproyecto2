@@ -1,8 +1,6 @@
-
 package miniproyecto2;
 
 public class Inicio extends javax.swing.JFrame {
-
 
     public Inicio() {
         initComponents();
@@ -116,7 +114,7 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_playActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        dispose(); 
+        dispose();
         Instrucciones Instrucciones = new Instrucciones();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -124,7 +122,6 @@ public class Inicio extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

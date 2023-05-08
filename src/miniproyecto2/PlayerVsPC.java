@@ -616,7 +616,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
         p4 = new javax.swing.JButton();
         p5 = new javax.swing.JButton();
         p6 = new javax.swing.JButton();
-        NombreJ1 = new javax.swing.JTextField();
+        campopersonamaquina = new javax.swing.JTextField();
         PuntajePC = new javax.swing.JTextField();
         PuntajeJ1 = new javax.swing.JTextField();
         MaquinaPC = new javax.swing.JTextField();
@@ -753,8 +753,13 @@ public class PlayerVsPC extends javax.swing.JFrame {
             }
         });
 
-        NombreJ1.setBackground(new java.awt.Color(255, 255, 0));
-        NombreJ1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        campopersonamaquina.setBackground(new java.awt.Color(255, 255, 0));
+        campopersonamaquina.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        campopersonamaquina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campopersonamaquinaActionPerformed(evt);
+            }
+        });
 
         PuntajePC.setBackground(new java.awt.Color(0, 0, 153));
         PuntajePC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -804,7 +809,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(NombreJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(campopersonamaquina, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MaquinaPC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -814,12 +819,12 @@ public class PlayerVsPC extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(NombreJ1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campopersonamaquina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MaquinaPC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PuntajePC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PuntajeJ1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(PuntajeJ1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PuntajePC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(p2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -971,6 +976,13 @@ public class PlayerVsPC extends javax.swing.JFrame {
     private void MaquinaPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MaquinaPCActionPerformed
         
     }//GEN-LAST:event_MaquinaPCActionPerformed
+
+    private void campopersonamaquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campopersonamaquinaActionPerformed
+        // TODO add your handling code here:
+        String nombre = campopersonamaquina.getText();
+        campopersonamaquina.setText(campopersonamaquina.getText()+nombre);
+        this.dispose();
+    }//GEN-LAST:event_campopersonamaquinaActionPerformed
     
     /**
      * @param args the command line arguments
@@ -998,21 +1010,6 @@ public class PlayerVsPC extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(PlayerVsPC.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -1024,9 +1021,9 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField MaquinaPC;
-    private javax.swing.JTextField NombreJ1;
     private javax.swing.JTextField PuntajeJ1;
     private javax.swing.JTextField PuntajePC;
+    public static javax.swing.JTextField campopersonamaquina;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton p1;
     private javax.swing.JButton p2;

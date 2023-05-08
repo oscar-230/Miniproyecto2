@@ -13,6 +13,7 @@ import javax.swing.JButton;
  * @author User
  */
 public class PlayerVsPlayer extends javax.swing.JFrame {
+
     int turno=0;
     
 
@@ -21,7 +22,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
      */
     public PlayerVsPlayer() {
         initComponents();
-        NombreJ2.setText("Hola");
+        
     }
     
     public void actionPerformed(ActionEvent e) {
@@ -58,8 +59,8 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         button22 = new javax.swing.JButton();
         PuntajeJ1 = new javax.swing.JTextField();
         PuntajeJ2 = new javax.swing.JTextField();
-        NombreJ2 = new javax.swing.JTextField();
-        NombreJ1 = new javax.swing.JTextField();
+        campojugadordos = new javax.swing.JTextField();
+        campojugadoruno = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -200,11 +201,23 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         PuntajeJ2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         PuntajeJ2.setForeground(new java.awt.Color(255, 255, 255));
 
-        NombreJ2.setBackground(new java.awt.Color(255, 255, 0));
-        NombreJ2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        campojugadordos.setEditable(false);
+        campojugadordos.setBackground(new java.awt.Color(255, 255, 0));
+        campojugadordos.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        campojugadordos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campojugadordosActionPerformed(evt);
+            }
+        });
 
-        NombreJ1.setBackground(new java.awt.Color(255, 255, 0));
-        NombreJ1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        campojugadoruno.setEditable(false);
+        campojugadoruno.setBackground(new java.awt.Color(255, 255, 0));
+        campojugadoruno.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        campojugadoruno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campojugadorunoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -239,9 +252,9 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
                 .addGap(0, 30, Short.MAX_VALUE))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(NombreJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(campojugadoruno, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(NombreJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(campojugadordos, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -249,8 +262,8 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(NombreJ1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NombreJ2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campojugadoruno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campojugadordos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PuntajeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -367,6 +380,20 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         
     }//GEN-LAST:event_button12KeyPressed
 
+    private void campojugadorunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campojugadorunoActionPerformed
+        // Para que el nombre aparezaca en la ventana
+        String nombre = campojugadoruno.getText();
+        campojugadoruno.setText(campojugadoruno.getText()+nombre);
+        this.dispose();
+    }//GEN-LAST:event_campojugadorunoActionPerformed
+
+    private void campojugadordosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campojugadordosActionPerformed
+        // TODO add your handling code here:
+        String nombre2 = campojugadordos.getText();
+        campojugadordos.setText(campojugadordos.getText()+nombre2);
+        this.dispose();
+    }//GEN-LAST:event_campojugadordosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -404,8 +431,6 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField NombreJ1;
-    private javax.swing.JTextField NombreJ2;
     private javax.swing.JTextField PuntajeJ1;
     private javax.swing.JTextField PuntajeJ2;
     private javax.swing.JButton button00;
@@ -417,6 +442,8 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     private javax.swing.JButton button20;
     private javax.swing.JButton button21;
     private javax.swing.JButton button22;
+    public static javax.swing.JTextField campojugadordos;
+    public static javax.swing.JTextField campojugadoruno;
     private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 }

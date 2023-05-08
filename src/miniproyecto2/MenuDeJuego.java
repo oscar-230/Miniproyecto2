@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 
 
 
+
 public class MenuDeJuego extends javax.swing.JFrame {
 
     public MenuDeJuego() {
@@ -18,10 +19,10 @@ public class MenuDeJuego extends javax.swing.JFrame {
 
         Puntos = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        primerjugador = new javax.swing.JTextField();
         jugador1 = new javax.swing.JLabel();
         jugador2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        segundojugador = new javax.swing.JTextField();
         Partida = new javax.swing.JLabel();
         persona = new javax.swing.JButton();
         maquina = new javax.swing.JButton();
@@ -37,9 +38,9 @@ public class MenuDeJuego extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 0));
         setLocation(500, 200);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        primerjugador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                primerjugadorActionPerformed(evt);
             }
         });
 
@@ -50,6 +51,12 @@ public class MenuDeJuego extends javax.swing.JFrame {
         jugador2.setBackground(new java.awt.Color(153, 255, 153));
         jugador2.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
         jugador2.setText("JUGADOR 2");
+
+        segundojugador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                segundojugadorActionPerformed(evt);
+            }
+        });
 
         Partida.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
         Partida.setText("SELECCIONAR CATEGORIA");
@@ -123,11 +130,11 @@ public class MenuDeJuego extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jugador2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(segundojugador, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jugador1)
                                 .addGap(52, 52, 52)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(primerjugador, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(17, 17, 17)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -158,11 +165,11 @@ public class MenuDeJuego extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jugador1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(primerjugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jugador2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(segundojugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -199,10 +206,14 @@ public class MenuDeJuego extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
+ 
     
     private void maquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maquinaActionPerformed
-       String nombre =jTextField1.getText();
+     
+        
+        
+        String nombre =primerjugador.getText();
+       
         if(!nombre.trim().isEmpty() || nombre.trim().length() > 0){
             Jugador jugador = new Jugador(nombre);
             dispose();
@@ -212,14 +223,23 @@ public class MenuDeJuego extends javax.swing.JFrame {
             } else {
             JOptionPane.showMessageDialog(null,"Por favor ingrese su nombre", 
                     "Advertencia", JOptionPane.ERROR_MESSAGE);
-            jTextField1.requestFocusInWindow();
+            segundojugador.requestFocusInWindow();
+        
+        
+        
+       
     }//GEN-LAST:event_maquinaActionPerformed
     }
+    
+    
     private void personaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personaActionPerformed
         // ESPACIO L¿PARA ANCLAR A LA VENTANA PROXIMA
-        String nombre =jTextField1.getText();
-        String nombre2 =jTextField2.getText();
-        if((!nombre.trim().isEmpty() || nombre.trim().length() > 0) && (!nombre2.trim().isEmpty() || nombre2.trim().length() > 0)){
+        
+        
+        String nombre =primerjugador.getText();
+        String nombre2 = segundojugador.getText();
+
+        if((!nombre.trim().isEmpty() || nombre.trim().length() > 0) && (!nombre.trim().isEmpty() || nombre.trim().length() > 0)){
             Jugador jugador = new Jugador(nombre);
             dispose();
             PlayerVsPlayer newframe = new PlayerVsPlayer();
@@ -228,14 +248,19 @@ public class MenuDeJuego extends javax.swing.JFrame {
             } else {
             JOptionPane.showMessageDialog(null,"Por favor ingrese su nombre", 
                     "Advertencia", JOptionPane.ERROR_MESSAGE);
-            jTextField1.requestFocusInWindow();
+            primerjugador.requestFocusInWindow();
         }
+        
+        PlayerVsPlayer.campojugadoruno.setText(nombre);
+        System.out.println(nombre);
+        PlayerVsPlayer.campojugadordos.setText(nombre2);
+        System.out.println(nombre2);
+        
     }//GEN-LAST:event_personaActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    private void primerjugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_primerjugadorActionPerformed
+  
+    }//GEN-LAST:event_primerjugadorActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
@@ -252,6 +277,10 @@ public class MenuDeJuego extends javax.swing.JFrame {
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton4ActionPerformed
+
+    private void segundojugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_segundojugadorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_segundojugadorActionPerformed
 
     
     
@@ -297,11 +326,11 @@ public class MenuDeJuego extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel jugador1;
     private javax.swing.JLabel jugador2;
     private javax.swing.JButton maquina;
     private javax.swing.JButton persona;
+    public static javax.swing.JTextField primerjugador;
+    public static javax.swing.JTextField segundojugador;
     // End of variables declaration//GEN-END:variables
 }
