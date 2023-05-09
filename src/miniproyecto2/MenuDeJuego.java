@@ -12,7 +12,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
         initComponents();
     }
 
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -218,11 +218,9 @@ public class MenuDeJuego extends javax.swing.JFrame {
  
     
     private void maquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maquinaActionPerformed
-     
-        
-        
+   
         String nombre =primerjugador.getText();
-       
+        
         if(!nombre.trim().isEmpty() || nombre.trim().length() > 0){
             Jugador jugador = new Jugador(nombre);
             dispose();
@@ -232,17 +230,17 @@ public class MenuDeJuego extends javax.swing.JFrame {
             } else {
             JOptionPane.showMessageDialog(null,"Por favor ingrese su nombre", 
                     "Advertencia", JOptionPane.ERROR_MESSAGE);
-            segundojugador.requestFocusInWindow();
-        
-        
-        
-       
+            primerjugador.requestFocusInWindow();
+           
     }//GEN-LAST:event_maquinaActionPerformed
+        PlayerVsPC.campopersonamaquina.setText(nombre);
+        System.out.println(nombre);
     }
     
+
     
     private void personaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personaActionPerformed
-        // ESPACIO L¿PARA ANCLAR A LA VENTANA PROXIMA
+        // ESPACIO L¿PARA ANCLAR A LA VENTANAOSCAR ASNDJNFAKJNJFVBIERFBRGEGUBTRGRUJ PROXIMA
         
         
         String nombre =primerjugador.getText();
@@ -317,6 +315,12 @@ public class MenuDeJuego extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -337,7 +341,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JLabel jugador1;
     private javax.swing.JLabel jugador2;
-    private javax.swing.JButton maquina;
+    public javax.swing.JButton maquina;
     private javax.swing.JButton persona;
     public static javax.swing.JTextField primerjugador;
     public static javax.swing.JTextField segundojugador;
