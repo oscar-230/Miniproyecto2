@@ -781,7 +781,6 @@ public class PlayerVsPC extends javax.swing.JFrame {
         PuntajeJ1.setBackground(new java.awt.Color(255, 255, 0));
         PuntajeJ1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         PuntajeJ1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        PuntajeJ1.setText("1");
         PuntajeJ1.setBorder(null);
         PuntajeJ1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -793,8 +792,12 @@ public class PlayerVsPC extends javax.swing.JFrame {
         PuntajePC.setBackground(new java.awt.Color(255, 255, 0));
         PuntajePC.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         PuntajePC.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        PuntajePC.setText("2");
         PuntajePC.setBorder(null);
+        PuntajePC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PuntajePCActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1018,6 +1021,10 @@ public class PlayerVsPC extends javax.swing.JFrame {
     private void MaquinaPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MaquinaPCActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_MaquinaPCActionPerformed
+
+    private void PuntajePCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PuntajePCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PuntajePCActionPerformed
 
     /**
      * @param args the command line arguments
