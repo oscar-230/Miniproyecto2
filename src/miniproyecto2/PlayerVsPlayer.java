@@ -193,10 +193,12 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
             }
         });
 
+        PuntajeJ1.setEditable(false);
         PuntajeJ1.setBackground(new java.awt.Color(0, 0, 153));
         PuntajeJ1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         PuntajeJ1.setForeground(new java.awt.Color(255, 255, 255));
 
+        PuntajeJ2.setEditable(false);
         PuntajeJ2.setBackground(new java.awt.Color(0, 0, 153));
         PuntajeJ2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         PuntajeJ2.setForeground(new java.awt.Color(255, 255, 255));
@@ -212,7 +214,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
         campojugadoruno.setEditable(false);
         campojugadoruno.setBackground(new java.awt.Color(255, 255, 0));
-        campojugadoruno.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        campojugadoruno.setFont(new java.awt.Font("Britannic Bold", 1, 24)); // NOI18N
         campojugadoruno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campojugadorunoActionPerformed(evt);
