@@ -547,7 +547,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
         //esta funcion comprueba si puede ganar
         if (!done && !fin) {
-            System.out.println("gaanar");
+            
             ganar();
         }
 
@@ -555,7 +555,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
         if (!done && !fin) {
             bloqueo();
-            System.out.println("bloqueo");
+            
         }
 
         //tira en el centro en caso de que este vacio
@@ -592,7 +592,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
         }
 
         if(v1!=0&&v2!=0&&v3!=0&&v4!=0&&v5!=0&&v6!=0&&v7!=0&&v8!=0&&v9!=0){
-            JOptionPane.showMessageDialog(null, "EMPATES ", "TIC TAC", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null, "EMPATE ", "TIC TAC", JOptionPane.PLAIN_MESSAGE);
             reset();
         }
 
