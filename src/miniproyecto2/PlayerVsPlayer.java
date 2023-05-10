@@ -16,6 +16,15 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
     int turno=0;
     
+    String XObutton00 ;
+    String XObutton01 ;
+    String XObutton02 ;
+    String XObutton10 ;
+    String XObutton11 ;
+    String XObutton12 ;
+    String XObutton20 ;
+    String XObutton21 ;
+    String XObutton22 ;
 
     /**
      * Creates new form Prueba
@@ -36,8 +45,72 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
             turno = 0; // cambia el turno al jugador 1
         }
     }
-}
     
+    }
+    
+    public void extraerContenido(){
+        
+        XObutton00 = button00.getText();
+        XObutton01 = button01.getText();
+        XObutton02 = button02.getText();
+        XObutton10 = button10.getText();
+        XObutton11 = button11.getText();
+        XObutton12 = button12.getText();
+        XObutton20 = button20.getText();
+        XObutton21 = button21.getText();
+        XObutton22 = button22.getText();
+    }
+    
+    public void ganador(){
+        extraerContenido();
+             
+               
+        if (XObutton00 != "" && XObutton00 == XObutton01 && XObutton01==XObutton02){
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+        }
+        if (XObutton10 != "" && XObutton10 == XObutton11 && XObutton11==XObutton12 ){
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+        }
+        if (XObutton20 != "" && XObutton20 == XObutton21 && XObutton21==XObutton22 ){
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+        }
+        if (XObutton00 != "" && XObutton00 == XObutton10 && XObutton10==XObutton20 ){
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+        }
+        if (XObutton01 != "" && XObutton01 == XObutton11 && XObutton11==XObutton21 ){
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+        }
+        if (XObutton02 != "" && XObutton02 == XObutton12 && XObutton12==XObutton22 ){
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+        }
+        if (XObutton00 != "" && XObutton00 == XObutton11 && XObutton11==XObutton22 ){
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+        }
+        if (XObutton02 != "" && XObutton02 == XObutton11 && XObutton11==XObutton20 ){
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+        }
+        
+        
+          
+    }
+
+   
         /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -324,7 +397,8 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
     private void button00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button00ActionPerformed
         actionPerformed(evt);
-       
+        ganador();
+        
     }//GEN-LAST:event_button00ActionPerformed
 
     private void button00KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button00KeyPressed
@@ -333,6 +407,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
     private void button01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button01ActionPerformed
        actionPerformed(evt);
+       ganador();
     }//GEN-LAST:event_button01ActionPerformed
 
     private void button01KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button01KeyPressed
@@ -341,6 +416,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
     private void button02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button02ActionPerformed
         actionPerformed(evt);
+        ganador();
     }//GEN-LAST:event_button02ActionPerformed
 
     private void button02KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button02KeyPressed
@@ -349,6 +425,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
     private void button20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button20ActionPerformed
        actionPerformed(evt);
+       ganador();
     }//GEN-LAST:event_button20ActionPerformed
 
     private void button20KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button20KeyPressed
@@ -357,6 +434,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
     private void button21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button21ActionPerformed
         actionPerformed(evt);
+        ganador();
     }//GEN-LAST:event_button21ActionPerformed
 
     private void button21KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button21KeyPressed
@@ -365,6 +443,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
     private void button22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button22ActionPerformed
         actionPerformed(evt);
+        ganador();
     }//GEN-LAST:event_button22ActionPerformed
 
     private void button22KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button22KeyPressed
@@ -373,6 +452,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
     private void button10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button10ActionPerformed
         actionPerformed(evt);
+        ganador();
     }//GEN-LAST:event_button10ActionPerformed
 
     private void button10KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button10KeyPressed
@@ -381,6 +461,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
     private void button11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button11ActionPerformed
        actionPerformed(evt);
+       ganador();
     }//GEN-LAST:event_button11ActionPerformed
 
     private void button11KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button11KeyPressed
@@ -389,6 +470,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
     private void button12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button12ActionPerformed
         actionPerformed(evt);
+        ganador();
     }//GEN-LAST:event_button12ActionPerformed
 
     private void button12KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button12KeyPressed

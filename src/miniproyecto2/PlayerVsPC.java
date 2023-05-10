@@ -539,9 +539,9 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
         //comprueba si el jugador gano
         if (gano) {
-            JOptionPane.showMessageDialog(null, "Gano Persona", "TIC TAC", JOptionPane.PLAIN_MESSAGE);
-            reset();
-            fin = true;
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();
         }
 
 
@@ -584,9 +584,9 @@ public class PlayerVsPC extends javax.swing.JFrame {
         if (done && !fin) {
             gano = winner(1);
             if (gano) {
-                JOptionPane.showMessageDialog(null, "GANA MAQUINA", "TIC TAC ", JOptionPane.PLAIN_MESSAGE);
-                reset();
-                fin = true;
+                Estadisticas newframe = new Estadisticas();
+                newframe.setVisible(true);
+                this.dispose();
             }
 
         }
