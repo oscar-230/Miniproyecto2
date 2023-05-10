@@ -1,36 +1,38 @@
 package miniproyecto2;
 
 import javax.swing.ButtonModel;
-import modelo.Jugador;
 import javax.swing.JOptionPane;
+
 
 public class MenuDeJuego extends javax.swing.JFrame {
     String puntajeNecesario;
-    int puntosParaGanar = 0;
+    int puntosWin = 0;
+    
+    
         
     public MenuDeJuego() {
         initComponents();
-        
     }
     
-       
     public void puntajeParaGanar() {
         // Obtener el botón seleccionado
         
         ButtonModel selectedButton = Puntos.getSelection();
         
         if (selectedButton != null) {
+            
             puntajeNecesario = selectedButton.getActionCommand();
-            puntosParaGanar = Integer.parseInt(puntajeNecesario);
+            puntosWin = Integer.parseInt(puntajeNecesario);
             //System.out.println(puntosParaGanar);
         }
          
         else {
             
-            puntosParaGanar = 0;
+            puntosWin = 0;
          }
     }
     
+      
     
     
     @SuppressWarnings("unchecked")
@@ -239,13 +241,14 @@ public class MenuDeJuego extends javax.swing.JFrame {
         String nombre = primerjugador.getText();
         puntajeParaGanar();
         
-        if((!nombre.trim().isEmpty() || nombre.trim().length() > 0) && puntosParaGanar != 0){
+        if((!nombre.trim().isEmpty() || nombre.trim().length() > 0) && puntosWin != 0){
             //Jugador jugador = new Jugador(nombre);
             dispose();
             PlayerVsPC newframe = new PlayerVsPC();
             newframe.setVisible(true);
             this.dispose();//para que no se acumulen las ventanas
             PlayerVsPC.campopersonamaquina.setText(nombre);
+            PlayerVsPC.puntosParaGanar.setText(puntajeNecesario);
             } else {
             JOptionPane.showMessageDialog(null,"Revise que su nombre este correcto \n Y que haya seleccionado la cantidad de puntos para Ganar", 
                     "Advertencia", JOptionPane.ERROR_MESSAGE);
@@ -265,7 +268,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
         String nombre2 = segundojugador.getText();
         puntajeParaGanar();
 
-        if(((!nombre.trim().isEmpty() || nombre.trim().length() > 0) && (!nombre.trim().isEmpty() || nombre.trim().length() > 0)) && puntosParaGanar != 0){
+        if(((!nombre.trim().isEmpty() || nombre.trim().length() > 0) && (!nombre.trim().isEmpty() || nombre.trim().length() > 0)) && puntosWin != 0){
             //Jugador jugador = new Jugador(nombre);
             dispose();
             PlayerVsPlayer newframe = new PlayerVsPlayer();
@@ -273,6 +276,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
             this.dispose();//para que no se acumulen las ventanas
             PlayerVsPlayer.campojugadoruno.setText(nombre);
             PlayerVsPlayer.campojugadordos.setText(nombre2);
+            PlayerVsPlayer.puntosParaGanar.setText(puntajeNecesario);
             } else {
             JOptionPane.showMessageDialog(null,"Revise que su nombre este correcto \n Y que haya seleccionado la cantidad de puntos para Ganar", 
                     "Advertencia", JOptionPane.ERROR_MESSAGE);

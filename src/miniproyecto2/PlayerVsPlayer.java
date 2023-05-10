@@ -42,6 +42,13 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     
     }
     
+     /*public void puntos(){
+        MenuDeJuego newframe = new MenuDeJuego();
+        int valorpuntosParaGanar = newframe.getpuntosParaGanar();
+        System.out.println("Valor de variableA en ClaseA: " + valorpuntosParaGanar);
+        
+    }*/
+    
     public void extraerContenido(){
         
         XObutton00 = button00.getText();
@@ -56,7 +63,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     }
     public void extraerPuntos(){
         String puntos = PuntajeJ1.getText();
-        String puntos2 = PuntajeJ2.getText();
+        String puntos2 = puntosParaGanar.getText();
         Estadisticas.PuntajeJ1.setText(puntos);
         Estadisticas.PuntajeJ2.setText(puntos2);
     }
@@ -79,6 +86,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
             this.dispose();//para que no se acumulen las ventanas
             extraerNombres();
             extraerPuntos();
+            
         }
         if (XObutton10 != "" && XObutton10 == XObutton11 && XObutton11==XObutton12 ){
             Estadisticas newframe = new Estadisticas();
@@ -155,9 +163,11 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         button21 = new javax.swing.JButton();
         button22 = new javax.swing.JButton();
         PuntajeJ1 = new javax.swing.JTextField();
-        PuntajeJ2 = new javax.swing.JTextField();
+        puntosParaGanar = new javax.swing.JTextField();
         campojugadordos = new javax.swing.JTextField();
         campojugadoruno = new javax.swing.JTextField();
+        PuntajeJ3 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -302,12 +312,17 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
             }
         });
 
-        PuntajeJ2.setEditable(false);
-        PuntajeJ2.setBackground(new java.awt.Color(77, 207, 192));
-        PuntajeJ2.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        PuntajeJ2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        PuntajeJ2.setText("0");
-        PuntajeJ2.setBorder(null);
+        puntosParaGanar.setEditable(false);
+        puntosParaGanar.setBackground(new java.awt.Color(77, 207, 192));
+        puntosParaGanar.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        puntosParaGanar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        puntosParaGanar.setText("0");
+        puntosParaGanar.setBorder(null);
+        puntosParaGanar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                puntosParaGanarActionPerformed(evt);
+            }
+        });
 
         campojugadordos.setEditable(false);
         campojugadordos.setBackground(new java.awt.Color(77, 207, 192));
@@ -333,6 +348,16 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
             }
         });
 
+        PuntajeJ3.setEditable(false);
+        PuntajeJ3.setBackground(new java.awt.Color(77, 207, 192));
+        PuntajeJ3.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        PuntajeJ3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        PuntajeJ3.setText("0");
+        PuntajeJ3.setBorder(null);
+
+        jLabel1.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        jLabel1.setText("Puntos Para Ganar");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -352,24 +377,34 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(button01, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(button02, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(button21, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(button22, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(button11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(button12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(button12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(button01, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(button02, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(PuntajeJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGap(29, 29, 29))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(PuntajeJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(PuntajeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(puntosParaGanar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -380,9 +415,12 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
                     .addComponent(campojugadordos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PuntajeJ1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PuntajeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(PuntajeJ1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(PuntajeJ3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(button01, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(button02, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -404,7 +442,11 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
                         .addComponent(button11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                         .addComponent(button21, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(puntosParaGanar)
+                    .addComponent(jLabel1))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -521,6 +563,12 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_PuntajeJ1ActionPerformed
 
+    private void puntosParaGanarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntosParaGanarActionPerformed
+        String nombre = puntosParaGanar.getText();
+        puntosParaGanar.setText(puntosParaGanar.getText()+nombre);
+        this.dispose();
+    }//GEN-LAST:event_puntosParaGanarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -558,8 +606,8 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField PuntajeJ1;
-    private javax.swing.JTextField PuntajeJ2;
+    public static javax.swing.JTextField PuntajeJ1;
+    public static javax.swing.JTextField PuntajeJ3;
     private javax.swing.JButton button00;
     private javax.swing.JButton button01;
     private javax.swing.JButton button02;
@@ -571,6 +619,8 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     private javax.swing.JButton button22;
     public static javax.swing.JTextField campojugadordos;
     public static javax.swing.JTextField campojugadoruno;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel4;
+    public static javax.swing.JTextField puntosParaGanar;
     // End of variables declaration//GEN-END:variables
 }

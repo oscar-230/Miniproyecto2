@@ -635,6 +635,8 @@ public class PlayerVsPC extends javax.swing.JFrame {
         campopersonamaquina = new javax.swing.JTextField();
         PuntajeJ1 = new javax.swing.JTextField();
         PuntajePC = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        puntosParaGanar = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -816,6 +818,21 @@ public class PlayerVsPC extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        jLabel1.setText("Puntos Para Ganar");
+
+        puntosParaGanar.setEditable(false);
+        puntosParaGanar.setBackground(new java.awt.Color(77, 207, 192));
+        puntosParaGanar.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        puntosParaGanar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        puntosParaGanar.setText("0");
+        puntosParaGanar.setBorder(null);
+        puntosParaGanar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                puntosParaGanarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -855,7 +872,12 @@ public class PlayerVsPC extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(p6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(p9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                        .addComponent(p9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(puntosParaGanar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -889,7 +911,11 @@ public class PlayerVsPC extends javax.swing.JFrame {
                     .addComponent(p8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(p7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(p9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(puntosParaGanar)
+                    .addComponent(jLabel1))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -900,9 +926,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -1043,6 +1067,12 @@ public class PlayerVsPC extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_PuntajePCActionPerformed
 
+    private void puntosParaGanarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntosParaGanarActionPerformed
+        String nombre = puntosParaGanar.getText();
+        puntosParaGanar.setText(puntosParaGanar.getText()+nombre);
+        this.dispose();
+    }//GEN-LAST:event_puntosParaGanarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1084,6 +1114,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
     private javax.swing.JTextField PuntajeJ1;
     private javax.swing.JTextField PuntajePC;
     public static javax.swing.JTextField campopersonamaquina;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton p1;
     private javax.swing.JButton p2;
@@ -1094,6 +1125,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
     private javax.swing.JButton p7;
     private javax.swing.JButton p8;
     private javax.swing.JButton p9;
+    public static javax.swing.JTextField puntosParaGanar;
     // End of variables declaration//GEN-END:variables
 
 }

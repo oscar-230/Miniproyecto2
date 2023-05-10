@@ -21,7 +21,7 @@ public class Jugador {
         this.nombre = nombre;
     }
 
-    public Jugador(int palabras, int aciertos, int fallos) {
+    public Jugador(int puntos) {
         this.puntos = puntos;
     }
     
