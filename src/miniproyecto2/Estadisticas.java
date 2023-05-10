@@ -2,6 +2,8 @@
 package miniproyecto2;
 
 
+
+
 public class Estadisticas extends javax.swing.JFrame {
 
     /**
@@ -69,7 +71,6 @@ public class Estadisticas extends javax.swing.JFrame {
         campopersonamaquina.setBackground(new java.awt.Color(77, 207, 192));
         campopersonamaquina.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         campopersonamaquina.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        campopersonamaquina.setText("Jugador 1");
         campopersonamaquina.setBorder(null);
         campopersonamaquina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,7 +82,6 @@ public class Estadisticas extends javax.swing.JFrame {
         campopersonamaquina1.setBackground(new java.awt.Color(77, 207, 192));
         campopersonamaquina1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         campopersonamaquina1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        campopersonamaquina1.setText("Jugador 2 / PC");
         campopersonamaquina1.setBorder(null);
         campopersonamaquina1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +93,6 @@ public class Estadisticas extends javax.swing.JFrame {
         PuntajeJ1.setBackground(new java.awt.Color(77, 207, 192));
         PuntajeJ1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         PuntajeJ1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        PuntajeJ1.setText("2");
         PuntajeJ1.setBorder(null);
         PuntajeJ1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,7 +104,6 @@ public class Estadisticas extends javax.swing.JFrame {
         PuntajeJ2.setBackground(new java.awt.Color(77, 207, 192));
         PuntajeJ2.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         PuntajeJ2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        PuntajeJ2.setText("1");
         PuntajeJ2.setBorder(null);
         PuntajeJ2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,7 +127,6 @@ public class Estadisticas extends javax.swing.JFrame {
         campopersonamaquina3.setBackground(new java.awt.Color(77, 207, 192));
         campopersonamaquina3.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         campopersonamaquina3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        campopersonamaquina3.setText("Jugador X");
         campopersonamaquina3.setBorder(null);
         campopersonamaquina3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -218,13 +215,13 @@ public class Estadisticas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void campopersonamaquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campopersonamaquinaActionPerformed
-        // TODO add your handling code here:
-        String nombre = campopersonamaquina.getText();
-        campopersonamaquina.setText(campopersonamaquina.getText()+nombre);
+       
     }//GEN-LAST:event_campopersonamaquinaActionPerformed
 
     private void campopersonamaquina1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campopersonamaquina1ActionPerformed
-        // TODO add your handling code here:
+        String nombre = campopersonamaquina1.getText();
+        campopersonamaquina1.setText(campopersonamaquina1.getText()+nombre);
+        this.dispose();
     }//GEN-LAST:event_campopersonamaquina1ActionPerformed
 
     private void PuntajeJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PuntajeJ1ActionPerformed
@@ -279,8 +276,8 @@ public class Estadisticas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField PuntajeJ1;
-    private javax.swing.JTextField PuntajeJ2;
+    public static javax.swing.JTextField PuntajeJ1;
+    public static javax.swing.JTextField PuntajeJ2;
     public static javax.swing.JTextField campopersonamaquina;
     public static javax.swing.JTextField campopersonamaquina1;
     public static javax.swing.JTextField campopersonamaquina2;
