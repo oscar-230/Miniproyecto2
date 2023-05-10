@@ -64,12 +64,12 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel4.setBackground(new java.awt.Color(77, 207, 192));
         setLocation(500, 200);
 
         button00.setBackground(new java.awt.Color(204, 255, 204));
         button00.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button00.setForeground(new java.awt.Color(204, 0, 204));
+        button00.setForeground(new java.awt.Color(0, 51, 0));
         button00.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button00ActionPerformed(evt);
@@ -83,7 +83,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
         button01.setBackground(new java.awt.Color(204, 255, 204));
         button01.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button01.setForeground(new java.awt.Color(204, 0, 204));
+        button01.setForeground(new java.awt.Color(0, 51, 0));
         button01.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button01ActionPerformed(evt);
@@ -97,7 +97,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
         button02.setBackground(new java.awt.Color(204, 255, 204));
         button02.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button02.setForeground(new java.awt.Color(204, 0, 204));
+        button02.setForeground(new java.awt.Color(0, 51, 0));
         button02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button02ActionPerformed(evt);
@@ -111,7 +111,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
         button10.setBackground(new java.awt.Color(204, 255, 204));
         button10.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button10.setForeground(new java.awt.Color(204, 0, 204));
+        button10.setForeground(new java.awt.Color(0, 51, 0));
         button10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button10ActionPerformed(evt);
@@ -125,7 +125,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
         button11.setBackground(new java.awt.Color(204, 255, 204));
         button11.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button11.setForeground(new java.awt.Color(204, 0, 153));
+        button11.setForeground(new java.awt.Color(0, 51, 0));
         button11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button11ActionPerformed(evt);
@@ -139,7 +139,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
         button12.setBackground(new java.awt.Color(204, 255, 204));
         button12.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button12.setForeground(new java.awt.Color(204, 0, 153));
+        button12.setForeground(new java.awt.Color(0, 51, 0));
         button12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button12ActionPerformed(evt);
@@ -153,7 +153,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
         button20.setBackground(new java.awt.Color(204, 255, 204));
         button20.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button20.setForeground(new java.awt.Color(204, 0, 204));
+        button20.setForeground(new java.awt.Color(0, 51, 0));
         button20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button20ActionPerformed(evt);
@@ -167,7 +167,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
         button21.setBackground(new java.awt.Color(204, 255, 204));
         button21.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button21.setForeground(new java.awt.Color(204, 0, 204));
+        button21.setForeground(new java.awt.Color(0, 51, 0));
         button21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button21ActionPerformed(evt);
@@ -181,7 +181,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
         button22.setBackground(new java.awt.Color(204, 255, 204));
         button22.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button22.setForeground(new java.awt.Color(204, 0, 204));
+        button22.setForeground(new java.awt.Color(0, 51, 0));
         button22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button22ActionPerformed(evt);
@@ -194,7 +194,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         });
 
         PuntajeJ1.setEditable(false);
-        PuntajeJ1.setBackground(new java.awt.Color(255, 255, 0));
+        PuntajeJ1.setBackground(new java.awt.Color(77, 207, 192));
         PuntajeJ1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         PuntajeJ1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         PuntajeJ1.setBorder(null);
@@ -205,14 +205,15 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         });
 
         PuntajeJ2.setEditable(false);
-        PuntajeJ2.setBackground(new java.awt.Color(255, 255, 0));
+        PuntajeJ2.setBackground(new java.awt.Color(77, 207, 192));
         PuntajeJ2.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         PuntajeJ2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         PuntajeJ2.setBorder(null);
 
         campojugadordos.setEditable(false);
-        campojugadordos.setBackground(new java.awt.Color(255, 255, 0));
+        campojugadordos.setBackground(new java.awt.Color(77, 207, 192));
         campojugadordos.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
+        campojugadordos.setForeground(new java.awt.Color(0, 51, 0));
         campojugadordos.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         campojugadordos.setBorder(null);
         campojugadordos.addActionListener(new java.awt.event.ActionListener() {
@@ -222,8 +223,9 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         });
 
         campojugadoruno.setEditable(false);
-        campojugadoruno.setBackground(new java.awt.Color(255, 255, 0));
+        campojugadoruno.setBackground(new java.awt.Color(77, 207, 192));
         campojugadoruno.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
+        campojugadoruno.setForeground(new java.awt.Color(0, 51, 0));
         campojugadoruno.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         campojugadoruno.setBorder(null);
         campojugadoruno.addActionListener(new java.awt.event.ActionListener() {
@@ -278,9 +280,9 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
                     .addComponent(campojugadoruno, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campojugadordos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PuntajeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PuntajeJ1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(PuntajeJ1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PuntajeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(button01, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)

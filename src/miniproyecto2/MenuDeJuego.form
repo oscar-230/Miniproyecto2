@@ -41,7 +41,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="ff" red="ff" type="rgb"/>
+          <Color blue="c0" green="cf" red="4d" type="rgb"/>
         </Property>
       </Properties>
       <AuxValues>
@@ -170,7 +170,7 @@
               <Font name="Dutch801 XBd BT" size="18" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="0" red="ff" type="rgb"/>
+              <Color blue="0" green="0" red="a8" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="JUGADOR 1 "/>
           </Properties>
@@ -184,7 +184,7 @@
               <Font name="Dutch801 XBd BT" size="18" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="0" red="ff" type="rgb"/>
+              <Color blue="0" green="0" red="a8" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="JUGADOR 2"/>
           </Properties>
@@ -214,7 +214,7 @@
               <Font name="Dutch801 XBd BT" size="18" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="66" red="66" type="rgb"/>
+              <Color blue="0" green="0" red="a8" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="SELECCIONAR CATEGORIA"/>
           </Properties>
@@ -222,7 +222,7 @@
         <Component class="javax.swing.JButton" name="persona">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="ff" type="rgb"/>
+              <Color blue="ff" green="ff" red="99" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Engravers MT" size="18" style="1"/>
@@ -236,7 +236,7 @@
         <Component class="javax.swing.JButton" name="maquina">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="ff" type="rgb"/>
+              <Color blue="ff" green="ff" red="99" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Engravers MT" size="18" style="1"/>
@@ -256,7 +256,7 @@
               <Font name="Dutch801 XBd BT" size="18" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="66" red="66" type="rgb"/>
+              <Color blue="0" green="0" red="a8" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="PUNTOS PARA GANAR"/>
           </Properties>
@@ -264,7 +264,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="ff" red="ff" type="rgb"/>
+              <Color blue="c0" green="cf" red="4d" type="rgb"/>
             </Property>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="Puntos"/>
@@ -278,7 +278,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="ff" red="ff" type="rgb"/>
+              <Color blue="c0" green="cf" red="4d" type="rgb"/>
             </Property>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="Puntos"/>
@@ -292,7 +292,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton3">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="ff" red="ff" type="rgb"/>
+              <Color blue="c0" green="cf" red="4d" type="rgb"/>
             </Property>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="Puntos"/>
@@ -306,7 +306,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton4">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="ff" red="ff" type="rgb"/>
+              <Color blue="c0" green="cf" red="4d" type="rgb"/>
             </Property>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="Puntos"/>

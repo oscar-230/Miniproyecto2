@@ -35,7 +35,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel1.setBackground(new java.awt.Color(77, 207, 192));
         setLocation(500, 200);
 
         primerjugador.setBackground(new java.awt.Color(153, 255, 255));
@@ -49,12 +49,12 @@ public class MenuDeJuego extends javax.swing.JFrame {
 
         jugador1.setBackground(new java.awt.Color(153, 255, 153));
         jugador1.setFont(new java.awt.Font("Dutch801 XBd BT", 1, 18)); // NOI18N
-        jugador1.setForeground(new java.awt.Color(255, 0, 204));
+        jugador1.setForeground(new java.awt.Color(168, 0, 0));
         jugador1.setText("JUGADOR 1 ");
 
         jugador2.setBackground(new java.awt.Color(153, 255, 153));
         jugador2.setFont(new java.awt.Font("Dutch801 XBd BT", 1, 18)); // NOI18N
-        jugador2.setForeground(new java.awt.Color(255, 0, 204));
+        jugador2.setForeground(new java.awt.Color(168, 0, 0));
         jugador2.setText("JUGADOR 2");
 
         segundojugador.setBackground(new java.awt.Color(153, 255, 255));
@@ -67,10 +67,10 @@ public class MenuDeJuego extends javax.swing.JFrame {
         });
 
         Partida.setFont(new java.awt.Font("Dutch801 XBd BT", 1, 18)); // NOI18N
-        Partida.setForeground(new java.awt.Color(102, 102, 255));
+        Partida.setForeground(new java.awt.Color(168, 0, 0));
         Partida.setText("SELECCIONAR CATEGORIA");
 
-        persona.setBackground(new java.awt.Color(255, 0, 0));
+        persona.setBackground(new java.awt.Color(153, 255, 255));
         persona.setFont(new java.awt.Font("Engravers MT", 1, 18)); // NOI18N
         persona.setText("1vs1");
         persona.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +79,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
             }
         });
 
-        maquina.setBackground(new java.awt.Color(255, 0, 0));
+        maquina.setBackground(new java.awt.Color(153, 255, 255));
         maquina.setFont(new java.awt.Font("Engravers MT", 1, 18)); // NOI18N
         maquina.setText("1vsPC");
         maquina.addActionListener(new java.awt.event.ActionListener() {
@@ -89,10 +89,10 @@ public class MenuDeJuego extends javax.swing.JFrame {
         });
 
         Partida1.setFont(new java.awt.Font("Dutch801 XBd BT", 1, 18)); // NOI18N
-        Partida1.setForeground(new java.awt.Color(102, 102, 255));
+        Partida1.setForeground(new java.awt.Color(168, 0, 0));
         Partida1.setText("PUNTOS PARA GANAR");
 
-        jRadioButton1.setBackground(new java.awt.Color(255, 255, 0));
+        jRadioButton1.setBackground(new java.awt.Color(77, 207, 192));
         Puntos.add(jRadioButton1);
         jRadioButton1.setText("1");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +101,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
             }
         });
 
-        jRadioButton2.setBackground(new java.awt.Color(255, 255, 0));
+        jRadioButton2.setBackground(new java.awt.Color(77, 207, 192));
         Puntos.add(jRadioButton2);
         jRadioButton2.setText("2");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +110,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
             }
         });
 
-        jRadioButton3.setBackground(new java.awt.Color(255, 255, 0));
+        jRadioButton3.setBackground(new java.awt.Color(77, 207, 192));
         Puntos.add(jRadioButton3);
         jRadioButton3.setText("3");
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +119,7 @@ public class MenuDeJuego extends javax.swing.JFrame {
             }
         });
 
-        jRadioButton4.setBackground(new java.awt.Color(255, 255, 0));
+        jRadioButton4.setBackground(new java.awt.Color(77, 207, 192));
         Puntos.add(jRadioButton4);
         jRadioButton4.setText("4");
         jRadioButton4.addActionListener(new java.awt.event.ActionListener() {

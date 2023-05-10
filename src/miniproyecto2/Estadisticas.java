@@ -43,7 +43,7 @@ public class Estadisticas extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 0));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel1.setBackground(new java.awt.Color(77, 207, 192));
         setLocation(500, 200);
 
         jLabel1.setFont(new java.awt.Font("Showcard Gothic", 1, 46)); // NOI18N
@@ -72,7 +72,7 @@ public class Estadisticas extends javax.swing.JFrame {
         });
 
         campopersonamaquina.setEditable(false);
-        campopersonamaquina.setBackground(new java.awt.Color(255, 255, 0));
+        campopersonamaquina.setBackground(new java.awt.Color(77, 207, 192));
         campopersonamaquina.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         campopersonamaquina.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         campopersonamaquina.setText("Jugador 1");
@@ -84,7 +84,7 @@ public class Estadisticas extends javax.swing.JFrame {
         });
 
         campopersonamaquina1.setEditable(false);
-        campopersonamaquina1.setBackground(new java.awt.Color(255, 255, 0));
+        campopersonamaquina1.setBackground(new java.awt.Color(77, 207, 192));
         campopersonamaquina1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         campopersonamaquina1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         campopersonamaquina1.setText("Jugador 2 / PC");
@@ -96,7 +96,7 @@ public class Estadisticas extends javax.swing.JFrame {
         });
 
         PuntajeJ1.setEditable(false);
-        PuntajeJ1.setBackground(new java.awt.Color(255, 255, 0));
+        PuntajeJ1.setBackground(new java.awt.Color(77, 207, 192));
         PuntajeJ1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         PuntajeJ1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         PuntajeJ1.setText("2");
@@ -108,7 +108,7 @@ public class Estadisticas extends javax.swing.JFrame {
         });
 
         PuntajeJ2.setEditable(false);
-        PuntajeJ2.setBackground(new java.awt.Color(255, 255, 0));
+        PuntajeJ2.setBackground(new java.awt.Color(77, 207, 192));
         PuntajeJ2.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         PuntajeJ2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         PuntajeJ2.setText("1");
@@ -120,7 +120,7 @@ public class Estadisticas extends javax.swing.JFrame {
         });
 
         campopersonamaquina2.setEditable(false);
-        campopersonamaquina2.setBackground(new java.awt.Color(255, 255, 0));
+        campopersonamaquina2.setBackground(new java.awt.Color(77, 207, 192));
         campopersonamaquina2.setFont(new java.awt.Font("Showcard Gothic", 0, 36)); // NOI18N
         campopersonamaquina2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         campopersonamaquina2.setText("GANADOR");
@@ -132,7 +132,7 @@ public class Estadisticas extends javax.swing.JFrame {
         });
 
         campopersonamaquina3.setEditable(false);
-        campopersonamaquina3.setBackground(new java.awt.Color(255, 255, 0));
+        campopersonamaquina3.setBackground(new java.awt.Color(77, 207, 192));
         campopersonamaquina3.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         campopersonamaquina3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         campopersonamaquina3.setText("Jugador X");
@@ -148,12 +148,10 @@ public class Estadisticas extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(campopersonamaquina, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(campopersonamaquina1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
