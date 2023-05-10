@@ -1,17 +1,37 @@
 package miniproyecto2;
 
+import javax.swing.ButtonModel;
 import modelo.Jugador;
 import javax.swing.JOptionPane;
 
-
-
-
 public class MenuDeJuego extends javax.swing.JFrame {
-
+    String puntajeNecesario;
+    int puntosParaGanar = 0;
+        
     public MenuDeJuego() {
         initComponents();
+        
     }
-
+    
+       
+    public void puntajeParaGanar() {
+        // Obtener el botón seleccionado
+        
+        ButtonModel selectedButton = Puntos.getSelection();
+        
+        if (selectedButton != null) {
+            puntajeNecesario = selectedButton.getActionCommand();
+            puntosParaGanar = Integer.parseInt(puntajeNecesario);
+            //System.out.println(puntosParaGanar);
+        }
+         
+        else {
+            
+            puntosParaGanar = 0;
+         }
+    }
+    
+    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -27,10 +47,10 @@ public class MenuDeJuego extends javax.swing.JFrame {
         persona = new javax.swing.JButton();
         maquina = new javax.swing.JButton();
         Partida1 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        PuntajeGanar1 = new javax.swing.JRadioButton();
+        PuntajeGanar2 = new javax.swing.JRadioButton();
+        PuntajeGanar3 = new javax.swing.JRadioButton();
+        PuntajeGanar4 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -92,39 +112,39 @@ public class MenuDeJuego extends javax.swing.JFrame {
         Partida1.setForeground(new java.awt.Color(168, 0, 0));
         Partida1.setText("PUNTOS PARA GANAR");
 
-        jRadioButton1.setBackground(new java.awt.Color(77, 207, 192));
-        Puntos.add(jRadioButton1);
-        jRadioButton1.setText("1");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        PuntajeGanar1.setBackground(new java.awt.Color(77, 207, 192));
+        Puntos.add(PuntajeGanar1);
+        PuntajeGanar1.setText("1");
+        PuntajeGanar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                PuntajeGanar1ActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setBackground(new java.awt.Color(77, 207, 192));
-        Puntos.add(jRadioButton2);
-        jRadioButton2.setText("2");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        PuntajeGanar2.setBackground(new java.awt.Color(77, 207, 192));
+        Puntos.add(PuntajeGanar2);
+        PuntajeGanar2.setText("2");
+        PuntajeGanar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                PuntajeGanar2ActionPerformed(evt);
             }
         });
 
-        jRadioButton3.setBackground(new java.awt.Color(77, 207, 192));
-        Puntos.add(jRadioButton3);
-        jRadioButton3.setText("3");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        PuntajeGanar3.setBackground(new java.awt.Color(77, 207, 192));
+        Puntos.add(PuntajeGanar3);
+        PuntajeGanar3.setText("3");
+        PuntajeGanar3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                PuntajeGanar3ActionPerformed(evt);
             }
         });
 
-        jRadioButton4.setBackground(new java.awt.Color(77, 207, 192));
-        Puntos.add(jRadioButton4);
-        jRadioButton4.setText("4");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        PuntajeGanar4.setBackground(new java.awt.Color(77, 207, 192));
+        Puntos.add(PuntajeGanar4);
+        PuntajeGanar4.setText("4");
+        PuntajeGanar4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                PuntajeGanar4ActionPerformed(evt);
             }
         });
 
@@ -150,13 +170,13 @@ public class MenuDeJuego extends javax.swing.JFrame {
                         .addGap(35, 35, 35)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jRadioButton3)
+                                .addComponent(PuntajeGanar3)
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton4))
+                                .addComponent(PuntajeGanar4))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jRadioButton1)
+                                .addComponent(PuntajeGanar1)
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton2))))
+                                .addComponent(PuntajeGanar2))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(Partida)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -187,12 +207,12 @@ public class MenuDeJuego extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton1)
-                            .addComponent(jRadioButton2))
+                            .addComponent(PuntajeGanar1)
+                            .addComponent(PuntajeGanar2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton4)
-                            .addComponent(jRadioButton3))
+                            .addComponent(PuntajeGanar4)
+                            .addComponent(PuntajeGanar3))
                         .addGap(30, 30, 30))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(Partida1)
@@ -216,22 +236,23 @@ public class MenuDeJuego extends javax.swing.JFrame {
     
     private void maquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maquinaActionPerformed
    
-        String nombre =primerjugador.getText();
+        String nombre = primerjugador.getText();
+        puntajeParaGanar();
         
-        if(!nombre.trim().isEmpty() || nombre.trim().length() > 0){
-            Jugador jugador = new Jugador(nombre);
+        if((!nombre.trim().isEmpty() || nombre.trim().length() > 0) && puntosParaGanar != 0){
+            //Jugador jugador = new Jugador(nombre);
             dispose();
             PlayerVsPC newframe = new PlayerVsPC();
             newframe.setVisible(true);
             this.dispose();//para que no se acumulen las ventanas
+            PlayerVsPC.campopersonamaquina.setText(nombre);
             } else {
-            JOptionPane.showMessageDialog(null,"Por favor ingrese su nombre", 
+            JOptionPane.showMessageDialog(null,"Revise que su nombre este correcto \n Y que haya seleccionado la cantidad de puntos para Ganar", 
                     "Advertencia", JOptionPane.ERROR_MESSAGE);
             primerjugador.requestFocusInWindow();
-           
+                               
     }//GEN-LAST:event_maquinaActionPerformed
-        PlayerVsPC.campopersonamaquina.setText(nombre);
-        System.out.println(nombre);
+        
     }
     
 
@@ -240,25 +261,26 @@ public class MenuDeJuego extends javax.swing.JFrame {
         // ESPACIO L¿PARA ANCLAR A LA VENTANAOSCAR ASNDJNFAKJNJFVBIERFBRGEGUBTRGRUJ PROXIMA
         
         
-        String nombre =primerjugador.getText();
+        String nombre = primerjugador.getText();
         String nombre2 = segundojugador.getText();
+        puntajeParaGanar();
 
-        if((!nombre.trim().isEmpty() || nombre.trim().length() > 0) && (!nombre.trim().isEmpty() || nombre.trim().length() > 0)){
-            Jugador jugador = new Jugador(nombre);
+        if(((!nombre.trim().isEmpty() || nombre.trim().length() > 0) && (!nombre.trim().isEmpty() || nombre.trim().length() > 0)) && puntosParaGanar != 0){
+            //Jugador jugador = new Jugador(nombre);
             dispose();
             PlayerVsPlayer newframe = new PlayerVsPlayer();
             newframe.setVisible(true);
             this.dispose();//para que no se acumulen las ventanas
+            PlayerVsPlayer.campojugadoruno.setText(nombre);
+            PlayerVsPlayer.campojugadordos.setText(nombre2);
             } else {
-            JOptionPane.showMessageDialog(null,"Por favor ingrese su nombre", 
+            JOptionPane.showMessageDialog(null,"Revise que su nombre este correcto \n Y que haya seleccionado la cantidad de puntos para Ganar", 
                     "Advertencia", JOptionPane.ERROR_MESSAGE);
             primerjugador.requestFocusInWindow();
         }
         
-        PlayerVsPlayer.campojugadoruno.setText(nombre);
-        System.out.println(nombre);
-        PlayerVsPlayer.campojugadordos.setText(nombre2);
-        System.out.println(nombre2);
+        
+        
         
     }//GEN-LAST:event_personaActionPerformed
 
@@ -266,21 +288,20 @@ public class MenuDeJuego extends javax.swing.JFrame {
   
     }//GEN-LAST:event_primerjugadorActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    private void PuntajeGanar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PuntajeGanar1ActionPerformed
+       PuntajeGanar1.setActionCommand("1");
+    }//GEN-LAST:event_PuntajeGanar1ActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    private void PuntajeGanar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PuntajeGanar2ActionPerformed
+        PuntajeGanar2.setActionCommand("2");
+    }//GEN-LAST:event_PuntajeGanar2ActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    private void PuntajeGanar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PuntajeGanar3ActionPerformed
+        PuntajeGanar3.setActionCommand("3");    }//GEN-LAST:event_PuntajeGanar3ActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    private void PuntajeGanar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PuntajeGanar4ActionPerformed
+        PuntajeGanar4.setActionCommand("4");
+    }//GEN-LAST:event_PuntajeGanar4ActionPerformed
 
     private void segundojugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_segundojugadorActionPerformed
         // TODO add your handling code here:
@@ -330,12 +351,12 @@ public class MenuDeJuego extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Partida;
     private javax.swing.JLabel Partida1;
+    private javax.swing.JRadioButton PuntajeGanar1;
+    private javax.swing.JRadioButton PuntajeGanar2;
+    private javax.swing.JRadioButton PuntajeGanar3;
+    private javax.swing.JRadioButton PuntajeGanar4;
     private javax.swing.ButtonGroup Puntos;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JLabel jugador1;
     private javax.swing.JLabel jugador2;
     public javax.swing.JButton maquina;
