@@ -16,16 +16,13 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JTextArea;
 
-/**
- *
- * @author Sebastián
- */
 public class Instrucciones extends JFrame {
     
     private JPanel jpContenido;
     private JLabel jlTitulo;
     private JTextArea instrucciones;
     private JButton btnAtras;
+    private Imagenes ejemplo;
    
     
     public Instrucciones() {
@@ -35,7 +32,7 @@ public class Instrucciones extends JFrame {
     private void initComponents() {
         setTitle("Instrucciones");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(519,530);
+        setSize(520,700);
         setLocationRelativeTo(null);
         setVisible(true); 
         setResizable(false);
@@ -44,21 +41,18 @@ public class Instrucciones extends JFrame {
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
          
         jpContenido = new JPanel();
-        
-        
-        //String texto = "Escoge la vocal que le falta a la palabra";
-        
+        ejemplo = new Imagenes("/imagenes/ejemplo.png");
+            
         jlTitulo = new JLabel("INSTRUCCIONES",SwingConstants.CENTER);
         jlTitulo.setFont(new Font("Showcard Gothic", Font.PLAIN, 48));
-        //instrucciones = new JLabel(texto);
         instrucciones = new JTextArea();
         instrucciones.setEditable(false);
         instrucciones.setFont(new Font("Calibri",Font.PLAIN,19));
-        instrucciones.setBounds(25,100, 450,300);
+        instrucciones.setBounds(25,320, 450,265);
         instrucciones.setBackground(new Color(0,0,0));
         instrucciones.setForeground(new Color(255,255,255));
         this.add(instrucciones);
-        instrucciones.append("\n  El Tic Tac Toe se juega en una cuadrícula de 3x3 casillas.\n");
+        instrucciones.append("  El Tic Tac Toe se juega en una cuadrícula de 3x3 casillas.\n");
         instrucciones.append("  Hay dos jugadores en el juego: uno juega con las X\n");
         instrucciones.append("  y otro con las O. El jugador con las X comienza el juego.\n");
         instrucciones.append("  Los jugadores se turnan para marcar una casilla vacía\n");
@@ -70,21 +64,26 @@ public class Instrucciones extends JFrame {
         instrucciones.append("  ha ganado,entonces el juego termina en empate.");
                         
         jpContenido.setBackground(new java.awt.Color(255, 255, 0));
-        jpContenido.setSize(520,500);        
-        jpContenido.setBounds(0,0, 520, 500);
+        jpContenido.setSize(520,700);        
+        jpContenido.setBounds(0,0, 520, 700);
         jpContenido.setLayout(null);
         
-        add(jpContenido);
+        ejemplo.setSize(250,245);
+        ejemplo.setBounds(135,65, 250,245);
         
-        jlTitulo.setBounds(0,20, 520,80);
+        
+        add(jpContenido);
+                
+        jlTitulo.setBounds(0,2, 520,80);
         jlTitulo.setForeground(Color.BLACK); 
         
         jpContenido.add(jlTitulo);
+        jpContenido.add(ejemplo);
         jpContenido.add(instrucciones);
         
         btnAtras = new JButton("VOLVER");
         btnAtras.setFont(new java.awt.Font("Arial", 0, 25));
-        btnAtras.setBounds(110,420, 300,50);
+        btnAtras.setBounds(110,600, 300,50);
         btnAtras.setBackground(new java.awt.Color(204,255,204));
         btnAtras.setForeground(new java.awt.Color(0, 0, 0));
         btnAtras.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
