@@ -9,6 +9,9 @@ import javax.swing.JButton;
 public class PlayerVsPlayer extends javax.swing.JFrame {
 
     int turno=0;
+    int puntosGanador = 0;
+    int X = 0;
+    int O = 0;
     
     String XObutton00 ;
     String XObutton01 ;
@@ -76,61 +79,75 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         Estadisticas.campopersonamaquina1.setText(nombre2);
     }
     
+    public void puntosGanador(){
+        puntosGanador = Integer.parseInt(puntosParaGanar.getText());
+    }
+    
+    
+    
+    
     public void ganador(){
         extraerContenido();
              
-               
-        if (XObutton00 != "" && XObutton00 == XObutton01 && XObutton01==XObutton02){
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
-            
-        }
-        if (XObutton10 != "" && XObutton10 == XObutton11 && XObutton11==XObutton12 ){
+           
+        if (XObutton00 != "" && XObutton00 == XObutton01 && XObutton01==XObutton02 && XObutton00 == "X" ){
+            X = X+1;
             Estadisticas newframe = new Estadisticas();
             newframe.setVisible(true);
             this.dispose();//para que no se acumulen las ventanas
             extraerNombres();
             extraerPuntos();
         }
-        if (XObutton20 != "" && XObutton20 == XObutton21 && XObutton21==XObutton22 ){
+        if (XObutton10 != "" && XObutton10 == XObutton11 && XObutton11==XObutton12 && XObutton10 == "X"){
+            X = X+1;
             Estadisticas newframe = new Estadisticas();
             newframe.setVisible(true);
             this.dispose();//para que no se acumulen las ventanas
             extraerNombres();
             extraerPuntos();
         }
-        if (XObutton00 != "" && XObutton00 == XObutton10 && XObutton10==XObutton20 ){
+        if (XObutton20 != "" && XObutton20 == XObutton21 && XObutton21==XObutton22 && XObutton20 == "X" ){
+            X = X+1;
             Estadisticas newframe = new Estadisticas();
             newframe.setVisible(true);
             this.dispose();//para que no se acumulen las ventanas
             extraerNombres();
             extraerPuntos();
         }
-        if (XObutton01 != "" && XObutton01 == XObutton11 && XObutton11==XObutton21 ){
+        if (XObutton00 != "" && XObutton00 == XObutton10 && XObutton10==XObutton20 && XObutton00 == "X" ){
+            X = X+1;
             Estadisticas newframe = new Estadisticas();
             newframe.setVisible(true);
             this.dispose();//para que no se acumulen las ventanas
             extraerNombres();
             extraerPuntos();
         }
-        if (XObutton02 != "" && XObutton02 == XObutton12 && XObutton12==XObutton22 ){
+        if (XObutton01 != "" && XObutton01 == XObutton11 && XObutton11==XObutton21 && XObutton01 == "X" ){
+            X = X+1;
             Estadisticas newframe = new Estadisticas();
             newframe.setVisible(true);
             this.dispose();//para que no se acumulen las ventanas
             extraerNombres();
             extraerPuntos();
         }
-        if (XObutton00 != "" && XObutton00 == XObutton11 && XObutton11==XObutton22 ){
+        if (XObutton02 != "" && XObutton02 == XObutton12 && XObutton12==XObutton22 && XObutton02 == "X" ){
+            X = X+1;
             Estadisticas newframe = new Estadisticas();
             newframe.setVisible(true);
             this.dispose();//para que no se acumulen las ventanas
             extraerNombres();
             extraerPuntos();
         }
-        if (XObutton02 != "" && XObutton02 == XObutton11 && XObutton11==XObutton20 ){
+        if (XObutton00 != "" && XObutton00 == XObutton11 && XObutton11==XObutton22 && XObutton00 == "X" ){
+            X = X+1;
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+            extraerNombres();
+            extraerPuntos();
+        }
+        if (XObutton02 != "" && XObutton02 == XObutton11 && XObutton11==XObutton20 && XObutton02 == "X" ){
+            X = X+1;
             Estadisticas newframe = new Estadisticas();
             newframe.setVisible(true);
             this.dispose();//para que no se acumulen las ventanas
@@ -138,7 +155,74 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
             extraerPuntos();
         }
         
+        ///Para La O
         
+        if (XObutton00 != "" && XObutton00 == XObutton01 && XObutton01==XObutton02 && XObutton00 == "O" ){
+            O = O+1;
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+            extraerNombres();
+            extraerPuntos();
+        }
+        if (XObutton10 != "" && XObutton10 == XObutton11 && XObutton11==XObutton12 && XObutton10 == "O"){
+            O = O+1;
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+            extraerNombres();
+            extraerPuntos();
+        }
+        if (XObutton20 != "" && XObutton20 == XObutton21 && XObutton21==XObutton22 && XObutton20 == "O" ){
+            O = O+1;
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+            extraerNombres();
+            extraerPuntos();
+        }
+        if (XObutton00 != "" && XObutton00 == XObutton10 && XObutton10==XObutton20 && XObutton00 == "O" ){
+            O = O+1;
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+            extraerNombres();
+            extraerPuntos();
+        }
+        if (XObutton01 != "" && XObutton01 == XObutton11 && XObutton11==XObutton21 && XObutton01 == "O" ){
+            O = O+1;
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+            extraerNombres();
+            extraerPuntos();
+        }
+        if (XObutton02 != "" && XObutton02 == XObutton12 && XObutton12==XObutton22 && XObutton02 == "O" ){
+            O = O+1;
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+            extraerNombres();
+            extraerPuntos();
+        }
+        if (XObutton00 != "" && XObutton00 == XObutton11 && XObutton11==XObutton22 && XObutton00 == "O" ){
+            O = O+1;
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+            extraerNombres();
+            extraerPuntos();
+        }
+        if (XObutton02 != "" && XObutton02 == XObutton11 && XObutton11==XObutton20 && XObutton02 == "O" ){
+            O = O+1;
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+            extraerNombres();
+            extraerPuntos();
+        }
+        
+          
           
     }
 
