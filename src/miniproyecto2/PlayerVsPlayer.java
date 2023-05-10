@@ -263,6 +263,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         PuntajeJ1.setBackground(new java.awt.Color(77, 207, 192));
         PuntajeJ1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         PuntajeJ1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        PuntajeJ1.setText("0");
         PuntajeJ1.setBorder(null);
         PuntajeJ1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -274,6 +275,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         PuntajeJ2.setBackground(new java.awt.Color(77, 207, 192));
         PuntajeJ2.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         PuntajeJ2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        PuntajeJ2.setText("0");
         PuntajeJ2.setBorder(null);
 
         campojugadordos.setEditable(false);

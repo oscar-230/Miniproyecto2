@@ -778,6 +778,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
         PuntajeJ1.setBackground(new java.awt.Color(77, 207, 192));
         PuntajeJ1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         PuntajeJ1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        PuntajeJ1.setText("0");
         PuntajeJ1.setBorder(null);
         PuntajeJ1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -789,6 +790,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
         PuntajePC.setBackground(new java.awt.Color(77, 207, 192));
         PuntajePC.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         PuntajePC.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        PuntajePC.setText("0");
         PuntajePC.setBorder(null);
         PuntajePC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
