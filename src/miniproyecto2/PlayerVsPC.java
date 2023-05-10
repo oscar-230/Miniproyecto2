@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package miniproyecto2;
 
@@ -539,15 +534,15 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
         //comprueba si el jugador gano
         if (gano) {
-            JOptionPane.showMessageDialog(null, "Gano Persona", "TIC TAC", JOptionPane.PLAIN_MESSAGE);
-            reset();
-            fin = true;
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();
         }
 
 
         //esta funcion comprueba si puede ganar
         if (!done && !fin) {
-            System.out.println("gaanar");
+            
             ganar();
         }
 
@@ -555,7 +550,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
         if (!done && !fin) {
             bloqueo();
-            System.out.println("bloqueo");
+            
         }
 
         //tira en el centro en caso de que este vacio
@@ -584,15 +579,15 @@ public class PlayerVsPC extends javax.swing.JFrame {
         if (done && !fin) {
             gano = winner(1);
             if (gano) {
-                JOptionPane.showMessageDialog(null, "GANA MAQUINA", "TIC TAC ", JOptionPane.PLAIN_MESSAGE);
-                reset();
-                fin = true;
+                Estadisticas newframe = new Estadisticas();
+                newframe.setVisible(true);
+                this.dispose();
             }
 
         }
 
         if(v1!=0&&v2!=0&&v3!=0&&v4!=0&&v5!=0&&v6!=0&&v7!=0&&v8!=0&&v9!=0){
-            JOptionPane.showMessageDialog(null, "EMPATES ", "TIC TAC", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null, "EMPATE ", "TIC TAC", JOptionPane.PLAIN_MESSAGE);
             reset();
         }
 
@@ -626,12 +621,12 @@ public class PlayerVsPC extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel1.setBackground(new java.awt.Color(77, 207, 192));
         setLocation(500, 200);
 
         p1.setBackground(new java.awt.Color(204, 255, 204));
         p1.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        p1.setForeground(new java.awt.Color(204, 0, 204));
+        p1.setForeground(new java.awt.Color(0, 51, 0));
         p1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p1ActionPerformed(evt);
@@ -645,7 +640,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
         p2.setBackground(new java.awt.Color(204, 255, 204));
         p2.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        p2.setForeground(new java.awt.Color(204, 0, 204));
+        p2.setForeground(new java.awt.Color(0, 51, 0));
         p2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p2ActionPerformed(evt);
@@ -659,7 +654,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
         p3.setBackground(new java.awt.Color(204, 255, 204));
         p3.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        p3.setForeground(new java.awt.Color(204, 0, 204));
+        p3.setForeground(new java.awt.Color(0, 51, 0));
         p3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p3ActionPerformed(evt);
@@ -673,7 +668,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
         p7.setBackground(new java.awt.Color(204, 255, 204));
         p7.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        p7.setForeground(new java.awt.Color(204, 0, 204));
+        p7.setForeground(new java.awt.Color(0, 51, 0));
         p7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p7ActionPerformed(evt);
@@ -687,7 +682,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
         p8.setBackground(new java.awt.Color(204, 255, 204));
         p8.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        p8.setForeground(new java.awt.Color(204, 0, 204));
+        p8.setForeground(new java.awt.Color(0, 51, 0));
         p8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p8ActionPerformed(evt);
@@ -701,7 +696,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
         p9.setBackground(new java.awt.Color(204, 255, 204));
         p9.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        p9.setForeground(new java.awt.Color(204, 0, 204));
+        p9.setForeground(new java.awt.Color(0, 51, 0));
         p9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p9ActionPerformed(evt);
@@ -715,7 +710,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
         p4.setBackground(new java.awt.Color(204, 255, 204));
         p4.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        p4.setForeground(new java.awt.Color(204, 0, 204));
+        p4.setForeground(new java.awt.Color(0, 51, 0));
         p4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p4ActionPerformed(evt);
@@ -729,7 +724,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
         p5.setBackground(new java.awt.Color(204, 255, 204));
         p5.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        p5.setForeground(new java.awt.Color(204, 0, 204));
+        p5.setForeground(new java.awt.Color(0, 51, 0));
         p5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p5ActionPerformed(evt);
@@ -743,7 +738,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
         p6.setBackground(new java.awt.Color(204, 255, 204));
         p6.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        p6.setForeground(new java.awt.Color(204, 0, 153));
+        p6.setForeground(new java.awt.Color(0, 51, 0));
         p6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 p6ActionPerformed(evt);
@@ -755,8 +750,9 @@ public class PlayerVsPC extends javax.swing.JFrame {
             }
         });
 
-        MaquinaPC.setBackground(new java.awt.Color(255, 255, 0));
+        MaquinaPC.setBackground(new java.awt.Color(77, 207, 192));
         MaquinaPC.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
+        MaquinaPC.setForeground(new java.awt.Color(0, 51, 0));
         MaquinaPC.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         MaquinaPC.setText("PC");
         MaquinaPC.setBorder(null);
@@ -767,8 +763,9 @@ public class PlayerVsPC extends javax.swing.JFrame {
         });
 
         campopersonamaquina.setEditable(false);
-        campopersonamaquina.setBackground(new java.awt.Color(255, 255, 0));
+        campopersonamaquina.setBackground(new java.awt.Color(77, 207, 192));
         campopersonamaquina.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
+        campopersonamaquina.setForeground(new java.awt.Color(0, 51, 0));
         campopersonamaquina.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         campopersonamaquina.setBorder(null);
         campopersonamaquina.addActionListener(new java.awt.event.ActionListener() {
@@ -778,7 +775,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
         });
 
         PuntajeJ1.setEditable(false);
-        PuntajeJ1.setBackground(new java.awt.Color(255, 255, 0));
+        PuntajeJ1.setBackground(new java.awt.Color(77, 207, 192));
         PuntajeJ1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         PuntajeJ1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         PuntajeJ1.setBorder(null);
@@ -789,7 +786,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
         });
 
         PuntajePC.setEditable(false);
-        PuntajePC.setBackground(new java.awt.Color(255, 255, 0));
+        PuntajePC.setBackground(new java.awt.Color(77, 207, 192));
         PuntajePC.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         PuntajePC.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         PuntajePC.setBorder(null);
