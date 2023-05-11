@@ -61,11 +61,11 @@ public class Instrucciones2 extends JFrame {
         instrucciones.setBackground(new Color(0,0,0));
         instrucciones.setForeground(new Color(255,255,255));
         this.add(instrucciones);
-        instrucciones.append("  Al estar en la pantalla de juego se te mostraran 9 .\n");
-        instrucciones.append("  Botones, los puedes seleccionar usando las flechas \n");
-        instrucciones.append("  de tu teclado. Para confirmar el sitio donde haras\n");
-        instrucciones.append("  tu movimiento debes pulsar la tecla enter y listo.\n");
-        instrucciones.append("                                          Diviertete");              
+        instrucciones.append("  Al estar en la pantalla de juego se te mostraran 9\n");
+        instrucciones.append("  Botones, los puedes seleccionar usando La tecla Tab\n");
+        instrucciones.append("  y las flechas de tu teclado. Para confirmar el sitio\n");
+        instrucciones.append("  donde haras tu movimiento debes pulsar la tecla \n");
+        instrucciones.append("                             Enter y listo Diviertete");              
         jpContenido.setBackground(new java.awt.Color(255, 255, 0));
         jpContenido.setSize(520,700);        
         jpContenido.setBounds(0,0, 520, 700);
