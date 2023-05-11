@@ -23,17 +23,17 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JTextArea;
 
-public class Instrucciones extends JFrame {
+public class Instrucciones2 extends JFrame {
     
     private JPanel jpContenido;
     private JLabel jlTitulo;
     private JTextArea instrucciones;
     private JButton btnAtras;
-    private JButton btnTeclado;
     private Imagenes ejemplo;
+    private Imagenes teclado;
    
     
-    public Instrucciones() {
+    public Instrucciones2() {
         initComponents();
     }
     
@@ -50,27 +50,22 @@ public class Instrucciones extends JFrame {
          
         jpContenido = new JPanel();
         ejemplo = new Imagenes("/imagenes/ejemplo.png");
+        teclado = new Imagenes("/imagenes/flechas.png");
             
-        jlTitulo = new JLabel("INSTRUCCIONES",SwingConstants.CENTER);
+        jlTitulo = new JLabel("JUGAR CON TECLADO",SwingConstants.CENTER);
         jlTitulo.setFont(new Font("Showcard Gothic", Font.PLAIN, 48));
         instrucciones = new JTextArea();
         instrucciones.setEditable(false);
         instrucciones.setFont(new Font("Calibri",Font.PLAIN,19));
-        instrucciones.setBounds(25,320, 450,265);
+        instrucciones.setBounds(45,460, 420,130);
         instrucciones.setBackground(new Color(0,0,0));
         instrucciones.setForeground(new Color(255,255,255));
         this.add(instrucciones);
-        instrucciones.append("  Tic Tac Toe se juega en una cuadrícula de 3x3 casillas.\n");
-        instrucciones.append("  Hay dos jugadores en el juego: uno juega con las X\n");
-        instrucciones.append("  y otro con las O. El jugador con las X comienza el juego.\n");
-        instrucciones.append("  Los jugadores se turnan para marcar una casilla vacía\n");
-        instrucciones.append("  en la cuadrícula con su símbolo (X u O).\n");
-        instrucciones.append("  El objetivo del juego es conseguir tres símbolos iguales\n");
-        instrucciones.append("  en línea, ya sea en horizontal, vertical o diagonal.\n");
-        instrucciones.append("  El primer jugador que consigue esto gana el juego.\n");
-        instrucciones.append("  Si no hay más casillas vacías en la cuadrícula y nadie\n");
-        instrucciones.append("  ha ganado,entonces el juego termina en empate.");
-                        
+        instrucciones.append("  Al estar en la pantalla de juego se te mostraran 9 .\n");
+        instrucciones.append("  Botones, los puedes seleccionar usando las flechas \n");
+        instrucciones.append("  de tu teclado. Para confirmar el sitio donde haras\n");
+        instrucciones.append("  tu movimiento debes pulsar la tecla enter y listo.\n");
+        instrucciones.append("                                          Diviertete");              
         jpContenido.setBackground(new java.awt.Color(255, 255, 0));
         jpContenido.setSize(520,700);        
         jpContenido.setBounds(0,0, 520, 700);
@@ -78,6 +73,9 @@ public class Instrucciones extends JFrame {
         
         ejemplo.setSize(250,245);
         ejemplo.setBounds(135,65, 250,245);
+        
+        teclado.setSize(180,117);
+        teclado.setBounds(165,330, 180,117);
         
         
         add(jpContenido);
@@ -87,30 +85,21 @@ public class Instrucciones extends JFrame {
         
         jpContenido.add(jlTitulo);
         jpContenido.add(ejemplo);
+        jpContenido.add(teclado);
         jpContenido.add(instrucciones);
         
         btnAtras = new JButton("VOLVER");
         btnAtras.setFont(new java.awt.Font("Arial", 0, 25));
-        btnAtras.setBounds(10,600, 230,50);
+        btnAtras.setBounds(110,600, 300,50);
         btnAtras.setBackground(new java.awt.Color(204,255,204));
         btnAtras.setForeground(new java.awt.Color(0, 0, 0));
         btnAtras.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         
         jpContenido.add(btnAtras);
         
-        btnTeclado = new JButton("Jugar Con Teclado");
-        btnTeclado.setFont(new java.awt.Font("Arial", 0, 25));
-        btnTeclado.setBounds(260,600, 230,50);
-        btnTeclado.setBackground(new java.awt.Color(204,255,204));
-        btnTeclado.setForeground(new java.awt.Color(0, 0, 0));
-        btnTeclado.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
-        
-        jpContenido.add(btnTeclado);
-        
         ManejadorDeEventos manejadorEventos = new ManejadorDeEventos();
         
         btnAtras.addActionListener(manejadorEventos);
-        btnTeclado.addActionListener(manejadorEventos);
         
        
     }
@@ -125,10 +114,6 @@ public class Instrucciones extends JFrame {
             if(evento.getSource() == btnAtras){                
                 dispose();
                 new Inicio().setVisible(true);
-            }
-            if(evento.getSource() == btnTeclado){                
-                dispose();
-                Instrucciones2 Instrucciones2 = new Instrucciones2();
             }
         }
         
