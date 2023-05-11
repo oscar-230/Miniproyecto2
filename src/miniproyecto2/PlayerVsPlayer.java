@@ -607,8 +607,27 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     }//GEN-LAST:event_b1ActionPerformed
 
     private void b1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b1KeyPressed
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             b1.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            b1.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            b4.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (b1.hasFocus()) {
+                b9.requestFocus();
+            } else if (b2.hasFocus()) {
+                b1.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (b1.hasFocus()) {
+                b2.requestFocus();
+            } else if (b2.hasFocus()) {
+                b3.requestFocus();
+            }
         }
     }//GEN-LAST:event_b1KeyPressed
 
@@ -619,8 +638,27 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     }//GEN-LAST:event_b2ActionPerformed
 
     private void b2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b2KeyPressed
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             b2.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            b2.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            b5.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (b2.hasFocus()) {
+                b1.requestFocus();
+            } else if (b3.hasFocus()) {
+                b2.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (b2.hasFocus()) {
+                b3.requestFocus();
+            } else if (b3.hasFocus()) {
+                b4.requestFocus();
+            }
         }
     }//GEN-LAST:event_b2KeyPressed
 
@@ -631,8 +669,27 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b3KeyPressed
-      if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+        int codigotecla = evt.getKeyCode();
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             b3.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            b3.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            b6.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (b3.hasFocus()) {
+                b2.requestFocus();
+            } else if (b4.hasFocus()) {
+                b3.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (b3.hasFocus()) {
+                b4.requestFocus();
+            } else if (b4.hasFocus()) {
+                b5.requestFocus();
+            }
         }
     }//GEN-LAST:event_b3KeyPressed
 
@@ -643,8 +700,27 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     }//GEN-LAST:event_b7ActionPerformed
 
     private void b7KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b7KeyPressed
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             b7.doClick();   
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            b4.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            b7.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (b7.hasFocus()) {
+                b6.requestFocus();
+            } else if (b8.hasFocus()) {
+                b7.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (b7.hasFocus()) {
+                b8.requestFocus();
+            } else if (b8.hasFocus()) {
+                b9.requestFocus();
+            }
         }
     }//GEN-LAST:event_b7KeyPressed
 
@@ -655,8 +731,27 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     }//GEN-LAST:event_b8ActionPerformed
 
     private void b8KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b8KeyPressed
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             b8.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            b5.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            b8.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (b8.hasFocus()) {
+                b7.requestFocus();
+            } else if (b9.hasFocus()) {
+                b8.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (b8.hasFocus()) {
+                b9.requestFocus();
+            } else if (b9.hasFocus()) {
+                b1.requestFocus();
+            }
         }
     }//GEN-LAST:event_b8KeyPressed
 
@@ -667,8 +762,27 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     }//GEN-LAST:event_b9ActionPerformed
 
     private void b9KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b9KeyPressed
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             b9.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            b6.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            b9.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (b9.hasFocus()) {
+                b8.requestFocus();
+            } else if (b1.hasFocus()) {
+                b9.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (b9.hasFocus()) {
+                b1.requestFocus();
+            } else if (b1.hasFocus()) {
+                b2.requestFocus();
+            }
         }
     }//GEN-LAST:event_b9KeyPressed
 
@@ -679,8 +793,27 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     }//GEN-LAST:event_b4ActionPerformed
 
     private void b4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b4KeyPressed
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             b4.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            b1.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            b7.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (b4.hasFocus()) {
+                b3.requestFocus();
+            } else if (b5.hasFocus()) {
+                b4.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (b4.hasFocus()) {
+                b5.requestFocus();
+            } else if (b5.hasFocus()) {
+                b6.requestFocus();
+            }
         }
     }//GEN-LAST:event_b4KeyPressed
 
@@ -691,8 +824,27 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     }//GEN-LAST:event_b5ActionPerformed
 
     private void b5KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b5KeyPressed
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            b7.doClick();
+            b5.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            b2.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            b8.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (b5.hasFocus()) {
+                b4.requestFocus();
+            } else if (b6.hasFocus()) {
+                b5.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (b5.hasFocus()) {
+                b6.requestFocus();
+            } else if (b6.hasFocus()) {
+                b7.requestFocus();
+            }
         }
     }//GEN-LAST:event_b5KeyPressed
 
@@ -703,8 +855,27 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     }//GEN-LAST:event_b6ActionPerformed
 
     private void b6KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b6KeyPressed
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             b6.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            b3.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            b9.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (b6.hasFocus()) {
+                b5.requestFocus();
+            } else if (b7.hasFocus()) {
+                b6.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (b6.hasFocus()) {
+                b7.requestFocus();
+            } else if (b7.hasFocus()) {
+                b8.requestFocus();
+            }
         }
     }//GEN-LAST:event_b6KeyPressed
 
