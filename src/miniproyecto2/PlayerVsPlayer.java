@@ -111,7 +111,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         
     }
     
-    public void Gano(){
+    public void seTermino(){
    
             Estadisticas newframe = new Estadisticas();
             newframe.setVisible(true);
@@ -129,84 +129,145 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         extraerContenido();
         puntosGanador();
         
-        if (X==puntosGanador || O==puntosGanador){
-            Gano();
-        }
-        else{     
+        
+          
         ///Para La X
         if (XObutton00 != "" && XObutton00 == XObutton01 && XObutton01==XObutton02 && XObutton00 == "X" ){
             X = X+1;
+            if (X==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
-            
+            }
         }
         if (XObutton10 != "" && XObutton10 == XObutton11 && XObutton11==XObutton12 && XObutton10 == "X"){
             X = X+1;
+            if (X==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
+            }
         }
         if (XObutton20 != "" && XObutton20 == XObutton21 && XObutton21==XObutton22 && XObutton20 == "X" ){
             X = X+1;
+            if (X==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
+            }
         }
         if (XObutton00 != "" && XObutton00 == XObutton10 && XObutton10==XObutton20 && XObutton00 == "X" ){
             X = X+1;
+            if (X==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
+            }
         }
         if (XObutton01 != "" && XObutton01 == XObutton11 && XObutton11==XObutton21 && XObutton01 == "X" ){
             X = X+1;
+            if (X==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
+            }
         }
         if (XObutton02 != "" && XObutton02 == XObutton12 && XObutton12==XObutton22 && XObutton02 == "X" ){
             X = X+1;
+            if (X==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
+            }
         }
         if (XObutton00 != "" && XObutton00 == XObutton11 && XObutton11==XObutton22 && XObutton00 == "X" ){
             X = X+1;
+            if (X==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
+            }
         }
         if (XObutton02 != "" && XObutton02 == XObutton11 && XObutton11==XObutton20 && XObutton02 == "X" ){
             X = X+1;
+            if (X==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
+            }
         }
         
         ///Para La O
         
         if (XObutton00 != "" && XObutton00 == XObutton01 && XObutton01==XObutton02 && XObutton00 == "O" ){
             O = O+1;
+            if (O==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
+            }
         }
         if (XObutton10 != "" && XObutton10 == XObutton11 && XObutton11==XObutton12 && XObutton10 == "O"){
             O = O+1;
+            if (O==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
+            }
         }
         if (XObutton20 != "" && XObutton20 == XObutton21 && XObutton21==XObutton22 && XObutton20 == "O" ){
             O = O+1;
+            if (O==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
+            }
         }
         if (XObutton00 != "" && XObutton00 == XObutton10 && XObutton10==XObutton20 && XObutton00 == "O" ){
             O = O+1;
+            if (O==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
+            }
         }
         if (XObutton01 != "" && XObutton01 == XObutton11 && XObutton11==XObutton21 && XObutton01 == "O" ){
             O = O+1;
+            if (O==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
+            }
         }
         if (XObutton02 != "" && XObutton02 == XObutton12 && XObutton12==XObutton22 && XObutton02 == "O" ){
             O = O+1;
+            if (O==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
+            }
         }
         if (XObutton00 != "" && XObutton00 == XObutton11 && XObutton11==XObutton22 && XObutton00 == "O" ){
             O = O+1;
+            if (O==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
+            }
         }
         if (XObutton02 != "" && XObutton02 == XObutton11 && XObutton11==XObutton20 && XObutton02 == "O" ){
             O = O+1;
+            if (O==puntosGanador){
+                seTermino();
+            }else{
             Resetear();
+            }
         }
         if(XObutton00 != ""&&XObutton01 != ""&&XObutton02 != ""&&XObutton10 != ""&&XObutton11 != ""&&XObutton12 != ""&&XObutton20 != ""&&XObutton21 != ""&&XObutton22 != ""){
             JOptionPane.showMessageDialog(null, "EMPATE ", "TIC TAC TOE", JOptionPane.PLAIN_MESSAGE);
             Resetear();
         }
-       }
+       
     }
 
    
