@@ -18,16 +18,16 @@ public class PlayerVsPC extends javax.swing.JFrame {
     public void extraerPuntos(){
         String puntos = PuntajeJ1.getText();
         String puntos2 = PuntajePC.getText();
-        Estadisticas.PuntajeJ1.setText(puntos);
-        Estadisticas.PuntajeJ2.setText(puntos2);
+        Estadisticas.PuntajeJ2.setText(puntos);
+        Estadisticas.PuntajeJ1.setText(puntos2);
     }
     
     
     public void extraerNombres(){
         String nombre = campopersonamaquina.getText();
         String nombre2 = MaquinaPC.getText();
-        Estadisticas.campopersonamaquina.setText(nombre);
-        Estadisticas.campopersonamaquina1.setText(nombre2);
+        Estadisticas.FinalJugador1.setText(nombre);
+        Estadisticas.FinalJugador2.setText(nombre2);
     }
 
     void reset() {

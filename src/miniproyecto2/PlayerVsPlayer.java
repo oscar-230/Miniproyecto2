@@ -42,8 +42,23 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
             turno = 0; // cambia el turno al jugador 1
         }
     }
+    }
+    
+    public void Resetear() {
+        
+        button00.setText("");
+        button01.setText("");
+        button02.setText("");
+        button10.setText("");
+        button11.setText("");
+        button12.setText("");
+        button20.setText("");
+        button21.setText("");
+        button22.setText("");
     
     }
+    
+    
     
      /*public void puntos(){
         MenuDeJuego newframe = new MenuDeJuego();
@@ -64,166 +79,129 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         XObutton21 = button21.getText();
         XObutton22 = button22.getText();
     }
-    public void extraerPuntos(){
-        String puntos = PuntajeJ1.getText();
-        String puntos2 = puntosParaGanar.getText();
-        Estadisticas.PuntajeJ1.setText(puntos);
-        Estadisticas.PuntajeJ2.setText(puntos2);
-    }
     
     
     public void extraerNombres(){
         String nombre = campojugadoruno.getText();
         String nombre2 = campojugadordos.getText();
-        Estadisticas.campopersonamaquina.setText(nombre);
-        Estadisticas.campopersonamaquina1.setText(nombre2);
+        Estadisticas.FinalJugador1.setText(nombre);
+        Estadisticas.FinalJugador2.setText(nombre2);
     }
     
     public void puntosGanador(){
         puntosGanador = Integer.parseInt(puntosParaGanar.getText());
     }
     
+    public void puntajes(){
+        PuntajeJ1.setText(""+X);
+        PuntajeJ2.setText(""+O);
+        
+    }
+    
+    public void quienGano(){
+        if(X>O){
+            String nombre = campojugadoruno.getText();
+            Estadisticas.Ganador.setText(nombre);
+        }
+        else{
+            String nombre = campojugadordos.getText();
+            Estadisticas.Ganador.setText(nombre);
+        }
+        
+    }
+    
+    public void Gano(){
+   
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+            Estadisticas.PuntajeJ1.setText(""+X);
+            Estadisticas.PuntajeJ2.setText(""+O);
+            extraerNombres();
+            quienGano();
+             
+    }
     
     
     
     public void ganador(){
         extraerContenido();
-             
-           
+        puntosGanador();
+        
+        if (X==puntosGanador || O==puntosGanador){
+            Gano();
+        }
+        else{     
+        ///Para La X
         if (XObutton00 != "" && XObutton00 == XObutton01 && XObutton01==XObutton02 && XObutton00 == "X" ){
             X = X+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
+            
         }
         if (XObutton10 != "" && XObutton10 == XObutton11 && XObutton11==XObutton12 && XObutton10 == "X"){
             X = X+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
         }
         if (XObutton20 != "" && XObutton20 == XObutton21 && XObutton21==XObutton22 && XObutton20 == "X" ){
             X = X+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
         }
         if (XObutton00 != "" && XObutton00 == XObutton10 && XObutton10==XObutton20 && XObutton00 == "X" ){
             X = X+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
         }
         if (XObutton01 != "" && XObutton01 == XObutton11 && XObutton11==XObutton21 && XObutton01 == "X" ){
             X = X+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
         }
         if (XObutton02 != "" && XObutton02 == XObutton12 && XObutton12==XObutton22 && XObutton02 == "X" ){
             X = X+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
         }
         if (XObutton00 != "" && XObutton00 == XObutton11 && XObutton11==XObutton22 && XObutton00 == "X" ){
             X = X+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
         }
         if (XObutton02 != "" && XObutton02 == XObutton11 && XObutton11==XObutton20 && XObutton02 == "X" ){
             X = X+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
         }
         
         ///Para La O
         
         if (XObutton00 != "" && XObutton00 == XObutton01 && XObutton01==XObutton02 && XObutton00 == "O" ){
             O = O+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
         }
         if (XObutton10 != "" && XObutton10 == XObutton11 && XObutton11==XObutton12 && XObutton10 == "O"){
             O = O+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
         }
         if (XObutton20 != "" && XObutton20 == XObutton21 && XObutton21==XObutton22 && XObutton20 == "O" ){
             O = O+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
         }
         if (XObutton00 != "" && XObutton00 == XObutton10 && XObutton10==XObutton20 && XObutton00 == "O" ){
             O = O+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
         }
         if (XObutton01 != "" && XObutton01 == XObutton11 && XObutton11==XObutton21 && XObutton01 == "O" ){
             O = O+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
         }
         if (XObutton02 != "" && XObutton02 == XObutton12 && XObutton12==XObutton22 && XObutton02 == "O" ){
             O = O+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
         }
         if (XObutton00 != "" && XObutton00 == XObutton11 && XObutton11==XObutton22 && XObutton00 == "O" ){
             O = O+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
         }
         if (XObutton02 != "" && XObutton02 == XObutton11 && XObutton11==XObutton20 && XObutton02 == "O" ){
             O = O+1;
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();//para que no se acumulen las ventanas
-            extraerNombres();
-            extraerPuntos();
+            Resetear();
         }
-        
-          
-          
+       }
     }
 
    
@@ -250,7 +228,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         puntosParaGanar = new javax.swing.JTextField();
         campojugadordos = new javax.swing.JTextField();
         campojugadoruno = new javax.swing.JTextField();
-        PuntajeJ3 = new javax.swing.JTextField();
+        PuntajeJ2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -432,12 +410,12 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
             }
         });
 
-        PuntajeJ3.setEditable(false);
-        PuntajeJ3.setBackground(new java.awt.Color(77, 207, 192));
-        PuntajeJ3.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        PuntajeJ3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        PuntajeJ3.setText("0");
-        PuntajeJ3.setBorder(null);
+        PuntajeJ2.setEditable(false);
+        PuntajeJ2.setBackground(new java.awt.Color(77, 207, 192));
+        PuntajeJ2.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        PuntajeJ2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        PuntajeJ2.setText("0");
+        PuntajeJ2.setBorder(null);
 
         jLabel1.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jLabel1.setText("Puntos Para Ganar");
@@ -476,7 +454,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(button02, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(PuntajeJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(PuntajeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGap(29, 29, 29))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
@@ -503,7 +481,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
                         .addComponent(PuntajeJ1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(21, 21, 21))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(PuntajeJ3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(PuntajeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(button01, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -550,7 +528,8 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     private void button00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button00ActionPerformed
         actionPerformed(evt);
         ganador();
-        
+        puntajes();
+       
     }//GEN-LAST:event_button00ActionPerformed
 
     private void button00KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button00KeyPressed
@@ -560,6 +539,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     private void button01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button01ActionPerformed
        actionPerformed(evt);
        ganador();
+       puntajes();
     }//GEN-LAST:event_button01ActionPerformed
 
     private void button01KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button01KeyPressed
@@ -569,6 +549,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     private void button02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button02ActionPerformed
         actionPerformed(evt);
         ganador();
+        puntajes();
     }//GEN-LAST:event_button02ActionPerformed
 
     private void button02KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button02KeyPressed
@@ -578,6 +559,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     private void button20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button20ActionPerformed
        actionPerformed(evt);
        ganador();
+       puntajes();
     }//GEN-LAST:event_button20ActionPerformed
 
     private void button20KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button20KeyPressed
@@ -587,6 +569,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     private void button21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button21ActionPerformed
         actionPerformed(evt);
         ganador();
+        puntajes();
     }//GEN-LAST:event_button21ActionPerformed
 
     private void button21KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button21KeyPressed
@@ -596,6 +579,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     private void button22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button22ActionPerformed
         actionPerformed(evt);
         ganador();
+        puntajes();
     }//GEN-LAST:event_button22ActionPerformed
 
     private void button22KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button22KeyPressed
@@ -605,6 +589,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     private void button10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button10ActionPerformed
         actionPerformed(evt);
         ganador();
+        puntajes();
     }//GEN-LAST:event_button10ActionPerformed
 
     private void button10KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button10KeyPressed
@@ -614,6 +599,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     private void button11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button11ActionPerformed
        actionPerformed(evt);
        ganador();
+       puntajes();
     }//GEN-LAST:event_button11ActionPerformed
 
     private void button11KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button11KeyPressed
@@ -623,6 +609,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     private void button12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button12ActionPerformed
         actionPerformed(evt);
         ganador();
+        puntajes();
     }//GEN-LAST:event_button12ActionPerformed
 
     private void button12KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button12KeyPressed
@@ -691,7 +678,7 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JTextField PuntajeJ1;
-    public static javax.swing.JTextField PuntajeJ3;
+    public static javax.swing.JTextField PuntajeJ2;
     private javax.swing.JButton button00;
     private javax.swing.JButton button01;
     private javax.swing.JButton button02;

@@ -27,12 +27,12 @@ public class Estadisticas extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        campopersonamaquina = new javax.swing.JTextField();
-        campopersonamaquina1 = new javax.swing.JTextField();
-        PuntajeJ1 = new javax.swing.JTextField();
+        FinalJugador1 = new javax.swing.JTextField();
+        FinalJugador2 = new javax.swing.JTextField();
         PuntajeJ2 = new javax.swing.JTextField();
+        PuntajeJ1 = new javax.swing.JTextField();
         campopersonamaquina2 = new javax.swing.JTextField();
-        campopersonamaquina3 = new javax.swing.JTextField();
+        Ganador = new javax.swing.JTextField();
 
         jFormattedTextField1.setText("jFormattedTextField1");
 
@@ -67,36 +67,25 @@ public class Estadisticas extends javax.swing.JFrame {
             }
         });
 
-        campopersonamaquina.setEditable(false);
-        campopersonamaquina.setBackground(new java.awt.Color(77, 207, 192));
-        campopersonamaquina.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        campopersonamaquina.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        campopersonamaquina.setBorder(null);
-        campopersonamaquina.addActionListener(new java.awt.event.ActionListener() {
+        FinalJugador1.setEditable(false);
+        FinalJugador1.setBackground(new java.awt.Color(77, 207, 192));
+        FinalJugador1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        FinalJugador1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        FinalJugador1.setBorder(null);
+        FinalJugador1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campopersonamaquinaActionPerformed(evt);
+                FinalJugador1ActionPerformed(evt);
             }
         });
 
-        campopersonamaquina1.setEditable(false);
-        campopersonamaquina1.setBackground(new java.awt.Color(77, 207, 192));
-        campopersonamaquina1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        campopersonamaquina1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        campopersonamaquina1.setBorder(null);
-        campopersonamaquina1.addActionListener(new java.awt.event.ActionListener() {
+        FinalJugador2.setEditable(false);
+        FinalJugador2.setBackground(new java.awt.Color(77, 207, 192));
+        FinalJugador2.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        FinalJugador2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        FinalJugador2.setBorder(null);
+        FinalJugador2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campopersonamaquina1ActionPerformed(evt);
-            }
-        });
-
-        PuntajeJ1.setEditable(false);
-        PuntajeJ1.setBackground(new java.awt.Color(77, 207, 192));
-        PuntajeJ1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        PuntajeJ1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        PuntajeJ1.setBorder(null);
-        PuntajeJ1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PuntajeJ1ActionPerformed(evt);
+                FinalJugador2ActionPerformed(evt);
             }
         });
 
@@ -108,6 +97,17 @@ public class Estadisticas extends javax.swing.JFrame {
         PuntajeJ2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PuntajeJ2ActionPerformed(evt);
+            }
+        });
+
+        PuntajeJ1.setEditable(false);
+        PuntajeJ1.setBackground(new java.awt.Color(77, 207, 192));
+        PuntajeJ1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        PuntajeJ1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        PuntajeJ1.setBorder(null);
+        PuntajeJ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PuntajeJ1ActionPerformed(evt);
             }
         });
 
@@ -123,14 +123,14 @@ public class Estadisticas extends javax.swing.JFrame {
             }
         });
 
-        campopersonamaquina3.setEditable(false);
-        campopersonamaquina3.setBackground(new java.awt.Color(77, 207, 192));
-        campopersonamaquina3.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        campopersonamaquina3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        campopersonamaquina3.setBorder(null);
-        campopersonamaquina3.addActionListener(new java.awt.event.ActionListener() {
+        Ganador.setEditable(false);
+        Ganador.setBackground(new java.awt.Color(77, 207, 192));
+        Ganador.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        Ganador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Ganador.setBorder(null);
+        Ganador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campopersonamaquina3ActionPerformed(evt);
+                GanadorActionPerformed(evt);
             }
         });
 
@@ -143,9 +143,9 @@ public class Estadisticas extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(campopersonamaquina, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(FinalJugador1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(campopersonamaquina1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(FinalJugador2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -156,14 +156,16 @@ public class Estadisticas extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(46, 46, 46)
-                .addComponent(PuntajeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(PuntajeJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PuntajeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(campopersonamaquina3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(Ganador, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(campopersonamaquina2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(83, 83, 83))
         );
@@ -172,18 +174,18 @@ public class Estadisticas extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campopersonamaquina1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campopersonamaquina, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(FinalJugador2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FinalJugador1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(PuntajeJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PuntajeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(PuntajeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PuntajeJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(campopersonamaquina2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(campopersonamaquina3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Ganador, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -214,31 +216,29 @@ public class Estadisticas extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void campopersonamaquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campopersonamaquinaActionPerformed
+    private void FinalJugador1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinalJugador1ActionPerformed
        
-    }//GEN-LAST:event_campopersonamaquinaActionPerformed
+    }//GEN-LAST:event_FinalJugador1ActionPerformed
 
-    private void campopersonamaquina1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campopersonamaquina1ActionPerformed
-        String nombre = campopersonamaquina1.getText();
-        campopersonamaquina1.setText(campopersonamaquina1.getText()+nombre);
-        this.dispose();
-    }//GEN-LAST:event_campopersonamaquina1ActionPerformed
-
-    private void PuntajeJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PuntajeJ1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PuntajeJ1ActionPerformed
+    private void FinalJugador2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinalJugador2ActionPerformed
+        
+    }//GEN-LAST:event_FinalJugador2ActionPerformed
 
     private void PuntajeJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PuntajeJ2ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_PuntajeJ2ActionPerformed
+
+    private void PuntajeJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PuntajeJ1ActionPerformed
+       
+    }//GEN-LAST:event_PuntajeJ1ActionPerformed
 
     private void campopersonamaquina2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campopersonamaquina2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campopersonamaquina2ActionPerformed
 
-    private void campopersonamaquina3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campopersonamaquina3ActionPerformed
+    private void GanadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GanadorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campopersonamaquina3ActionPerformed
+    }//GEN-LAST:event_GanadorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -276,12 +276,12 @@ public class Estadisticas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JTextField FinalJugador1;
+    public static javax.swing.JTextField FinalJugador2;
+    public static javax.swing.JTextField Ganador;
     public static javax.swing.JTextField PuntajeJ1;
     public static javax.swing.JTextField PuntajeJ2;
-    public static javax.swing.JTextField campopersonamaquina;
-    public static javax.swing.JTextField campopersonamaquina1;
     public static javax.swing.JTextField campopersonamaquina2;
-    public static javax.swing.JTextField campopersonamaquina3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JFormattedTextField jFormattedTextField1;
