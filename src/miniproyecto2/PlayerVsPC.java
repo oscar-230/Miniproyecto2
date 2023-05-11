@@ -549,9 +549,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
         //comprueba si el jugador gano
         if (gano) {
-            Estadisticas newframe = new Estadisticas();
-            newframe.setVisible(true);
-            this.dispose();
+            reset();
         }
 
 
@@ -594,11 +592,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
         if (done && !fin) {
             gano = winner(1);
             if (gano) {
-                Estadisticas newframe = new Estadisticas();
-                newframe.setVisible(true);
-                this.dispose();
-                extraerNombres();
-                extraerPuntos();
+                reset();
                 
             }
 

@@ -3,6 +3,7 @@ package miniproyecto2;
 
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 
 
@@ -199,6 +200,10 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         }
         if (XObutton02 != "" && XObutton02 == XObutton11 && XObutton11==XObutton20 && XObutton02 == "O" ){
             O = O+1;
+            Resetear();
+        }
+        if(XObutton00 != ""&&XObutton01 != ""&&XObutton02 != ""&&XObutton10 != ""&&XObutton11 != ""&&XObutton12 != ""&&XObutton20 != ""&&XObutton21 != ""&&XObutton22 != ""){
+            JOptionPane.showMessageDialog(null, "EMPATE ", "TIC TAC TOE", JOptionPane.PLAIN_MESSAGE);
             Resetear();
         }
        }
