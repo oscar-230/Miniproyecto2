@@ -14,12 +14,30 @@ public class PlayerVsPC extends javax.swing.JFrame {
     int v1, v2, v3, v4, v5, v6, v7, v8, v9;
     boolean done = false;
     boolean fin = false;
+    int X = 0;
+    int O = 0;
+    int puntosGanador = 0;
     
-    public void extraerPuntos(){
-        String puntos = PuntajeJ1.getText();
-        String puntos2 = PuntajePC.getText();
-        Estadisticas.PuntajeJ2.setText(puntos);
-        Estadisticas.PuntajeJ1.setText(puntos2);
+    public void puntosGanador(){
+        puntosGanador = Integer.parseInt(puntosParaGanar.getText());
+    }
+    
+    public void puntajes(){
+        PuntajeJ1.setText(""+O);
+        PuntajePC.setText(""+X);
+        
+    }
+    
+    public void quienGano(){
+        if(O>X){
+            String nombre = campopersonamaquina.getText();
+            Estadisticas.Ganador.setText(nombre);
+        }
+        else{
+            String nombre = MaquinaPC.getText();
+            Estadisticas.Ganador.setText(nombre);
+        }
+        
     }
     
     
@@ -29,6 +47,19 @@ public class PlayerVsPC extends javax.swing.JFrame {
         Estadisticas.FinalJugador1.setText(nombre);
         Estadisticas.FinalJugador2.setText(nombre2);
     }
+    
+    public void seTermino(){
+        
+            Estadisticas newframe = new Estadisticas();
+            newframe.setVisible(true);
+            this.dispose();//para que no se acumulen las ventanas
+            Estadisticas.PuntajeJ1.setText(""+O);
+            Estadisticas.PuntajeJ2.setText(""+X);
+            extraerNombres();
+            quienGano();
+        
+    }
+    
 
     void reset() {
         v1 = 0;
@@ -549,7 +580,14 @@ public class PlayerVsPC extends javax.swing.JFrame {
 
         //comprueba si el jugador gano
         if (gano) {
+            puntosGanador();
+            O = O + 1;
+            if (O == puntosGanador){
+            seTermino();
+            }
+            else{
             reset();
+            }
         }
 
 
@@ -592,7 +630,17 @@ public class PlayerVsPC extends javax.swing.JFrame {
         if (done && !fin) {
             gano = winner(1);
             if (gano) {
-                reset();
+                puntosGanador();
+                X = X + 1;
+                System.out.println(""+puntosGanador);
+                if (X == puntosGanador){
+                    seTermino();
+                    }
+                else{
+                    reset();
+                    System.out.println(""+X);
+                }
+                
                 
             }
 
