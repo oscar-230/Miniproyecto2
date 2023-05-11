@@ -59,7 +59,7 @@ public class Instrucciones extends JFrame {
         instrucciones.setBackground(new Color(0,0,0));
         instrucciones.setForeground(new Color(255,255,255));
         this.add(instrucciones);
-        instrucciones.append("  El Tic Tac Toe se juega en una cuadrícula de 3x3 casillas.\n");
+        instrucciones.append("  Tic Tac Toe se juega en una cuadrícula de 3x3 casillas.\n");
         instrucciones.append("  Hay dos jugadores en el juego: uno juega con las X\n");
         instrucciones.append("  y otro con las O. El jugador con las X comienza el juego.\n");
         instrucciones.append("  Los jugadores se turnan para marcar una casilla vacía\n");
