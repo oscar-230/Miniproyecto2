@@ -3,14 +3,14 @@ package miniproyecto2;
 
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
-import logica.Juego;
+
 
 /**
  *
  * @author ASUS
  */
 public class PlayerVsPC extends javax.swing.JFrame {
-    private Juego juego;
+    
     int v1, v2, v3, v4, v5, v6, v7, v8, v9;
     boolean done = false;
     boolean fin = false;
