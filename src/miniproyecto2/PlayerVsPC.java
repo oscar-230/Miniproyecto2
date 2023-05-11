@@ -1031,65 +1031,227 @@ public class PlayerVsPC extends javax.swing.JFrame {
     }//GEN-LAST:event_p9ActionPerformed
 
     private void p1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p1KeyPressed
-        // TODO add your handling code here:
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             p1.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            p1.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            p4.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (p1.hasFocus()) {
+                p9.requestFocus();
+            } else if (p2.hasFocus()) {
+                p1.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (p1.hasFocus()) {
+                p2.requestFocus();
+            } else if (p2.hasFocus()) {
+                p3.requestFocus();
+            }
         }
     }//GEN-LAST:event_p1KeyPressed
 
     private void p2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p2KeyPressed
-        // TODO add your handling code here:
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             p2.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            p2.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            p5.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (p2.hasFocus()) {
+                p1.requestFocus();
+            } else if (p3.hasFocus()) {
+                p2.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (p2.hasFocus()) {
+                p3.requestFocus();
+            } else if (p3.hasFocus()) {
+                p4.requestFocus();
+            }
         }
     }//GEN-LAST:event_p2KeyPressed
 
     private void p3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p3KeyPressed
-        // TODO add your handling code here:
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             p3.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            p3.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            p6.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (p3.hasFocus()) {
+                p2.requestFocus();
+            } else if (p4.hasFocus()) {
+                p3.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (p3.hasFocus()) {
+                p4.requestFocus();
+            } else if (p4.hasFocus()) {
+                p5.requestFocus();
+            }
         }
     }//GEN-LAST:event_p3KeyPressed
 
     private void p4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p4KeyPressed
-        // TODO add your handling code here:
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             p4.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            p1.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            p7.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (p4.hasFocus()) {
+                p3.requestFocus();
+            } else if (p5.hasFocus()) {
+                p4.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (p4.hasFocus()) {
+                p5.requestFocus();
+            } else if (p5.hasFocus()) {
+                p6.requestFocus();
+            }
         }
     }//GEN-LAST:event_p4KeyPressed
 
     private void p5KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p5KeyPressed
-        // TODO add your handling code here:
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             p5.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            p2.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            p8.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (p5.hasFocus()) {
+                p4.requestFocus();
+            } else if (p6.hasFocus()) {
+                p5.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (p5.hasFocus()) {
+                p6.requestFocus();
+            } else if (p6.hasFocus()) {
+                p7.requestFocus();
+            }
         }
     }//GEN-LAST:event_p5KeyPressed
 
     private void p6KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p6KeyPressed
-        // TODO add your handling code here:
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             p6.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            p3.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            p9.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (p6.hasFocus()) {
+                p5.requestFocus();
+            } else if (p7.hasFocus()) {
+                p6.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (p6.hasFocus()) {
+                p7.requestFocus();
+            } else if (p7.hasFocus()) {
+                p8.requestFocus();
+            }
         }
     }//GEN-LAST:event_p6KeyPressed
 
     private void p7KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p7KeyPressed
-        // TODO add your handling code here:
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             p7.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            p4.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            p7.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (p7.hasFocus()) {
+                p6.requestFocus();
+            } else if (p8.hasFocus()) {
+                p7.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (p7.hasFocus()) {
+                p8.requestFocus();
+            } else if (p8.hasFocus()) {
+                p9.requestFocus();
+            }
         }
     }//GEN-LAST:event_p7KeyPressed
 
     private void p8KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p8KeyPressed
-        // TODO add your handling code here:
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             p8.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            p5.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            p8.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (p8.hasFocus()) {
+                p7.requestFocus();
+            } else if (p9.hasFocus()) {
+                p8.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (p8.hasFocus()) {
+                p9.requestFocus();
+            } else if (p9.hasFocus()) {
+                p1.requestFocus();
+            }
         }
     }//GEN-LAST:event_p8KeyPressed
 
     private void p9KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p9KeyPressed
-        // TODO add your handling code here:
+        int codigotecla = evt.getKeyCode();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             p9.doClick();
+        }
+        if (codigotecla == KeyEvent.VK_UP) {
+            p6.requestFocus();
+            
+        } else if (codigotecla == KeyEvent.VK_DOWN) {
+            p9.requestFocus();
+        } else if (codigotecla == KeyEvent.VK_LEFT) {
+            if (p9.hasFocus()) {
+                p8.requestFocus();
+            } else if (p1.hasFocus()) {
+                p9.requestFocus();
+            }
+        } else if(codigotecla == KeyEvent.VK_RIGHT) {
+            if (p9.hasFocus()) {
+                p1.requestFocus();
+            } else if (p1.hasFocus()) {
+                p2.requestFocus();
+            }
         }
     }//GEN-LAST:event_p9KeyPressed
 
