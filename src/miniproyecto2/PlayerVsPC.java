@@ -1,14 +1,16 @@
+/*
+Autores:  Luis Carlos Lucero A <lucero.luis@correounivalle.edu.co> <202027560>
+          Oscar David Cuaical L <cuaical.oscar@correounivalle.edu.co> <202270657>
+Grupo: 01
+N° Laboratorio: 02
+Fecha de realización: 11/05/2023
+*/
 
 package miniproyecto2;
 
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
-
-/**
- *
- * @author ASUS
- */
 public class PlayerVsPC extends javax.swing.JFrame {
     
     int v1, v2, v3, v4, v5, v6, v7, v8, v9;
