@@ -2,6 +2,7 @@
 package miniproyecto2;
 
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
@@ -47,15 +48,15 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     
     public void Resetear() {
         
-        button00.setText("");
-        button01.setText("");
-        button02.setText("");
-        button10.setText("");
-        button11.setText("");
-        button12.setText("");
-        button20.setText("");
-        button21.setText("");
-        button22.setText("");
+        b1.setText("");
+        b2.setText("");
+        b3.setText("");
+        b4.setText("");
+        b5.setText("");
+        b6.setText("");
+        b7.setText("");
+        b8.setText("");
+        b9.setText("");
     
     }
     
@@ -70,15 +71,15 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     
     public void extraerContenido(){
         
-        XObutton00 = button00.getText();
-        XObutton01 = button01.getText();
-        XObutton02 = button02.getText();
-        XObutton10 = button10.getText();
-        XObutton11 = button11.getText();
-        XObutton12 = button12.getText();
-        XObutton20 = button20.getText();
-        XObutton21 = button21.getText();
-        XObutton22 = button22.getText();
+        XObutton00 = b1.getText();
+        XObutton01 = b2.getText();
+        XObutton02 = b3.getText();
+        XObutton10 = b4.getText();
+        XObutton11 = b5.getText();
+        XObutton12 = b6.getText();
+        XObutton20 = b7.getText();
+        XObutton21 = b8.getText();
+        XObutton22 = b9.getText();
     }
     
     
@@ -281,15 +282,15 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel4 = new javax.swing.JPanel();
-        button00 = new javax.swing.JButton();
-        button01 = new javax.swing.JButton();
-        button02 = new javax.swing.JButton();
-        button10 = new javax.swing.JButton();
-        button11 = new javax.swing.JButton();
-        button12 = new javax.swing.JButton();
-        button20 = new javax.swing.JButton();
-        button21 = new javax.swing.JButton();
-        button22 = new javax.swing.JButton();
+        b1 = new javax.swing.JButton();
+        b2 = new javax.swing.JButton();
+        b3 = new javax.swing.JButton();
+        b4 = new javax.swing.JButton();
+        b5 = new javax.swing.JButton();
+        b6 = new javax.swing.JButton();
+        b7 = new javax.swing.JButton();
+        b8 = new javax.swing.JButton();
+        b9 = new javax.swing.JButton();
         PuntajeJ1 = new javax.swing.JTextField();
         puntosParaGanar = new javax.swing.JTextField();
         campojugadordos = new javax.swing.JTextField();
@@ -302,129 +303,129 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(77, 207, 192));
         setLocation(500, 200);
 
-        button00.setBackground(new java.awt.Color(204, 255, 204));
-        button00.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button00.setForeground(new java.awt.Color(0, 51, 0));
-        button00.addActionListener(new java.awt.event.ActionListener() {
+        b1.setBackground(new java.awt.Color(204, 255, 204));
+        b1.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
+        b1.setForeground(new java.awt.Color(0, 51, 0));
+        b1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button00ActionPerformed(evt);
+                b1ActionPerformed(evt);
             }
         });
-        button00.addKeyListener(new java.awt.event.KeyAdapter() {
+        b1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                button00KeyPressed(evt);
+                b1KeyPressed(evt);
             }
         });
 
-        button01.setBackground(new java.awt.Color(204, 255, 204));
-        button01.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button01.setForeground(new java.awt.Color(0, 51, 0));
-        button01.addActionListener(new java.awt.event.ActionListener() {
+        b2.setBackground(new java.awt.Color(204, 255, 204));
+        b2.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
+        b2.setForeground(new java.awt.Color(0, 51, 0));
+        b2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button01ActionPerformed(evt);
+                b2ActionPerformed(evt);
             }
         });
-        button01.addKeyListener(new java.awt.event.KeyAdapter() {
+        b2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                button01KeyPressed(evt);
+                b2KeyPressed(evt);
             }
         });
 
-        button02.setBackground(new java.awt.Color(204, 255, 204));
-        button02.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button02.setForeground(new java.awt.Color(0, 51, 0));
-        button02.addActionListener(new java.awt.event.ActionListener() {
+        b3.setBackground(new java.awt.Color(204, 255, 204));
+        b3.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
+        b3.setForeground(new java.awt.Color(0, 51, 0));
+        b3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button02ActionPerformed(evt);
+                b3ActionPerformed(evt);
             }
         });
-        button02.addKeyListener(new java.awt.event.KeyAdapter() {
+        b3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                button02KeyPressed(evt);
+                b3KeyPressed(evt);
             }
         });
 
-        button10.setBackground(new java.awt.Color(204, 255, 204));
-        button10.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button10.setForeground(new java.awt.Color(0, 51, 0));
-        button10.addActionListener(new java.awt.event.ActionListener() {
+        b4.setBackground(new java.awt.Color(204, 255, 204));
+        b4.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
+        b4.setForeground(new java.awt.Color(0, 51, 0));
+        b4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button10ActionPerformed(evt);
+                b4ActionPerformed(evt);
             }
         });
-        button10.addKeyListener(new java.awt.event.KeyAdapter() {
+        b4.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                button10KeyPressed(evt);
+                b4KeyPressed(evt);
             }
         });
 
-        button11.setBackground(new java.awt.Color(204, 255, 204));
-        button11.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button11.setForeground(new java.awt.Color(0, 51, 0));
-        button11.addActionListener(new java.awt.event.ActionListener() {
+        b5.setBackground(new java.awt.Color(204, 255, 204));
+        b5.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
+        b5.setForeground(new java.awt.Color(0, 51, 0));
+        b5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button11ActionPerformed(evt);
+                b5ActionPerformed(evt);
             }
         });
-        button11.addKeyListener(new java.awt.event.KeyAdapter() {
+        b5.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                button11KeyPressed(evt);
+                b5KeyPressed(evt);
             }
         });
 
-        button12.setBackground(new java.awt.Color(204, 255, 204));
-        button12.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button12.setForeground(new java.awt.Color(0, 51, 0));
-        button12.addActionListener(new java.awt.event.ActionListener() {
+        b6.setBackground(new java.awt.Color(204, 255, 204));
+        b6.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
+        b6.setForeground(new java.awt.Color(0, 51, 0));
+        b6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button12ActionPerformed(evt);
+                b6ActionPerformed(evt);
             }
         });
-        button12.addKeyListener(new java.awt.event.KeyAdapter() {
+        b6.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                button12KeyPressed(evt);
+                b6KeyPressed(evt);
             }
         });
 
-        button20.setBackground(new java.awt.Color(204, 255, 204));
-        button20.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button20.setForeground(new java.awt.Color(0, 51, 0));
-        button20.addActionListener(new java.awt.event.ActionListener() {
+        b7.setBackground(new java.awt.Color(204, 255, 204));
+        b7.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
+        b7.setForeground(new java.awt.Color(0, 51, 0));
+        b7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button20ActionPerformed(evt);
+                b7ActionPerformed(evt);
             }
         });
-        button20.addKeyListener(new java.awt.event.KeyAdapter() {
+        b7.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                button20KeyPressed(evt);
+                b7KeyPressed(evt);
             }
         });
 
-        button21.setBackground(new java.awt.Color(204, 255, 204));
-        button21.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button21.setForeground(new java.awt.Color(0, 51, 0));
-        button21.addActionListener(new java.awt.event.ActionListener() {
+        b8.setBackground(new java.awt.Color(204, 255, 204));
+        b8.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
+        b8.setForeground(new java.awt.Color(0, 51, 0));
+        b8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button21ActionPerformed(evt);
+                b8ActionPerformed(evt);
             }
         });
-        button21.addKeyListener(new java.awt.event.KeyAdapter() {
+        b8.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                button21KeyPressed(evt);
+                b8KeyPressed(evt);
             }
         });
 
-        button22.setBackground(new java.awt.Color(204, 255, 204));
-        button22.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
-        button22.setForeground(new java.awt.Color(0, 51, 0));
-        button22.addActionListener(new java.awt.event.ActionListener() {
+        b9.setBackground(new java.awt.Color(204, 255, 204));
+        b9.setFont(new java.awt.Font("Freestyle Script", 1, 36)); // NOI18N
+        b9.setForeground(new java.awt.Color(0, 51, 0));
+        b9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button22ActionPerformed(evt);
+                b9ActionPerformed(evt);
             }
         });
-        button22.addKeyListener(new java.awt.event.KeyAdapter() {
+        b9.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                button22KeyPressed(evt);
+                b9KeyPressed(evt);
             }
         });
 
@@ -499,26 +500,26 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(button20, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button00, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(b7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(b1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(b4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(button21, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(b8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(button22, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(b9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(button11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(b5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(button12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(b6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(button01, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(b2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(button02, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(b3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(PuntajeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE)))))
@@ -550,26 +551,26 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
                         .addComponent(PuntajeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(button01, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button02, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button00, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(b2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(b3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(b1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(button12, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-                            .addComponent(button10, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE))
+                            .addComponent(b6, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                            .addComponent(b4, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE))
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(20, 20, 20)
-                                .addComponent(button22, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(b9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(button20, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(b7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(button11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(b5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
-                        .addComponent(button21, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(b8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(puntosParaGanar)
@@ -591,96 +592,114 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void button00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button00ActionPerformed
+    private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         actionPerformed(evt);
         ganador();
         puntajes();
        
-    }//GEN-LAST:event_button00ActionPerformed
+    }//GEN-LAST:event_b1ActionPerformed
 
-    private void button00KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button00KeyPressed
-        
-    }//GEN-LAST:event_button00KeyPressed
+    private void b1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b1KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            b1.doClick();
+        }
+    }//GEN-LAST:event_b1KeyPressed
 
-    private void button01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button01ActionPerformed
+    private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
        actionPerformed(evt);
        ganador();
        puntajes();
-    }//GEN-LAST:event_button01ActionPerformed
+    }//GEN-LAST:event_b2ActionPerformed
 
-    private void button01KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button01KeyPressed
-        
-    }//GEN-LAST:event_button01KeyPressed
+    private void b2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b2KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            b2.doClick();
+        }
+    }//GEN-LAST:event_b2KeyPressed
 
-    private void button02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button02ActionPerformed
+    private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
         actionPerformed(evt);
         ganador();
         puntajes();
-    }//GEN-LAST:event_button02ActionPerformed
+    }//GEN-LAST:event_b3ActionPerformed
 
-    private void button02KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button02KeyPressed
-      
-    }//GEN-LAST:event_button02KeyPressed
+    private void b3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b3KeyPressed
+      if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            b3.doClick();
+        }
+    }//GEN-LAST:event_b3KeyPressed
 
-    private void button20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button20ActionPerformed
+    private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
        actionPerformed(evt);
        ganador();
        puntajes();
-    }//GEN-LAST:event_button20ActionPerformed
+    }//GEN-LAST:event_b7ActionPerformed
 
-    private void button20KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button20KeyPressed
-        
-    }//GEN-LAST:event_button20KeyPressed
+    private void b7KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b7KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            b7.doClick();   
+        }
+    }//GEN-LAST:event_b7KeyPressed
 
-    private void button21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button21ActionPerformed
+    private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
         actionPerformed(evt);
         ganador();
         puntajes();
-    }//GEN-LAST:event_button21ActionPerformed
+    }//GEN-LAST:event_b8ActionPerformed
 
-    private void button21KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button21KeyPressed
-        
-    }//GEN-LAST:event_button21KeyPressed
+    private void b8KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b8KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            b8.doClick();
+        }
+    }//GEN-LAST:event_b8KeyPressed
 
-    private void button22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button22ActionPerformed
+    private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
         actionPerformed(evt);
         ganador();
         puntajes();
-    }//GEN-LAST:event_button22ActionPerformed
+    }//GEN-LAST:event_b9ActionPerformed
 
-    private void button22KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button22KeyPressed
-        
-    }//GEN-LAST:event_button22KeyPressed
+    private void b9KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b9KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            b9.doClick();
+        }
+    }//GEN-LAST:event_b9KeyPressed
 
-    private void button10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button10ActionPerformed
+    private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
         actionPerformed(evt);
         ganador();
         puntajes();
-    }//GEN-LAST:event_button10ActionPerformed
+    }//GEN-LAST:event_b4ActionPerformed
 
-    private void button10KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button10KeyPressed
-        
-    }//GEN-LAST:event_button10KeyPressed
+    private void b4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b4KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            b4.doClick();
+        }
+    }//GEN-LAST:event_b4KeyPressed
 
-    private void button11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button11ActionPerformed
+    private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
        actionPerformed(evt);
        ganador();
        puntajes();
-    }//GEN-LAST:event_button11ActionPerformed
+    }//GEN-LAST:event_b5ActionPerformed
 
-    private void button11KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button11KeyPressed
-        
-    }//GEN-LAST:event_button11KeyPressed
+    private void b5KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b5KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            b7.doClick();
+        }
+    }//GEN-LAST:event_b5KeyPressed
 
-    private void button12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button12ActionPerformed
+    private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
         actionPerformed(evt);
         ganador();
         puntajes();
-    }//GEN-LAST:event_button12ActionPerformed
+    }//GEN-LAST:event_b6ActionPerformed
 
-    private void button12KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button12KeyPressed
-        
-    }//GEN-LAST:event_button12KeyPressed
+    private void b6KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b6KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            b6.doClick();
+        }
+    }//GEN-LAST:event_b6KeyPressed
 
     private void campojugadorunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campojugadorunoActionPerformed
         // Para que el nombre aparezaca en la ventana
@@ -745,15 +764,15 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JTextField PuntajeJ1;
     public static javax.swing.JTextField PuntajeJ2;
-    private javax.swing.JButton button00;
-    private javax.swing.JButton button01;
-    private javax.swing.JButton button02;
-    private javax.swing.JButton button10;
-    private javax.swing.JButton button11;
-    private javax.swing.JButton button12;
-    private javax.swing.JButton button20;
-    private javax.swing.JButton button21;
-    private javax.swing.JButton button22;
+    private javax.swing.JButton b1;
+    private javax.swing.JButton b2;
+    private javax.swing.JButton b3;
+    private javax.swing.JButton b4;
+    private javax.swing.JButton b5;
+    private javax.swing.JButton b6;
+    private javax.swing.JButton b7;
+    private javax.swing.JButton b8;
+    private javax.swing.JButton b9;
     public static javax.swing.JTextField campojugadordos;
     public static javax.swing.JTextField campojugadoruno;
     private javax.swing.JLabel jLabel1;
