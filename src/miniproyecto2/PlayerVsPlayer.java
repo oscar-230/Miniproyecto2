@@ -490,6 +490,11 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         PuntajeJ2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         PuntajeJ2.setText("0");
         PuntajeJ2.setBorder(null);
+        PuntajeJ2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PuntajeJ2ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jLabel1.setText("Puntos Para Ganar");
@@ -902,6 +907,10 @@ public class PlayerVsPlayer extends javax.swing.JFrame {
         puntosParaGanar.setText(puntosParaGanar.getText()+nombre);
         this.dispose();
     }//GEN-LAST:event_puntosParaGanarActionPerformed
+
+    private void PuntajeJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PuntajeJ2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PuntajeJ2ActionPerformed
 
     /**
      * @param args the command line arguments

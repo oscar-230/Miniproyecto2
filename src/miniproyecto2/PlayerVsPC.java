@@ -583,12 +583,14 @@ public class PlayerVsPC extends javax.swing.JFrame {
         //comprueba si el jugador gano
         if (gano) {
             puntosGanador();
+            
             O = O + 1;
             if (O == puntosGanador){
             seTermino();
             }
             else{
             reset();
+            puntajes();
             }
         }
 
@@ -633,14 +635,15 @@ public class PlayerVsPC extends javax.swing.JFrame {
             gano = winner(1);
             if (gano) {
                 puntosGanador();
+                
                 X = X + 1;
-                System.out.println(""+puntosGanador);
+                
                 if (X == puntosGanador){
                     seTermino();
                     }
                 else{
                     reset();
-                    System.out.println(""+X);
+                    puntajes();
                 }
                 
                 
@@ -1270,7 +1273,7 @@ public class PlayerVsPC extends javax.swing.JFrame {
     }//GEN-LAST:event_MaquinaPCActionPerformed
 
     private void PuntajePCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PuntajePCActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_PuntajePCActionPerformed
 
     private void puntosParaGanarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntosParaGanarActionPerformed
